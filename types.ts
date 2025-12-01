@@ -6,6 +6,8 @@ export interface SymbolInfo {
   multiplier: number;
   volatility: number;
   sector: 'metal' | 'energy' | 'agri' | 'index' | 'chemical';
+  marginRate: number; // e.g., 0.10 for 10%
+  fee: number;        // Fixed fee per lot
 }
 
 export interface BarData {
@@ -42,6 +44,7 @@ export interface TradeRecord {
   direction: 1 | -1;
   price: number;
   qty: number;
+  fee: number; 
   pnl?: number;
 }
 
@@ -52,6 +55,7 @@ export interface Marker {
   shape: 'arrowUp' | 'arrowDown' | 'circle' | 'square';
   text?: string;
   size?: number;
+  id?: string; // To identify specific markers like Macro events
 }
 
 export interface PositionLine {
@@ -63,12 +67,13 @@ export interface PositionLine {
 export interface Toast {
   id: number;
   message: string;
-  type: 'success' | 'info' | 'warn';
+  type: 'success' | 'info' | 'warn' | 'error';
 }
 
 export interface Point {
   time: number;
   price: number;
+  logical?: number; 
 }
 
 export interface TrendLine {
@@ -78,17 +83,37 @@ export interface TrendLine {
   color: string;
 }
 
-export type TimeFrame = '1m' | '5m' | '15m' | '1D';
+export type TimeFrame = '15m' | '1h' | '4h' | '1D';
 
 export type DrawingTool = 'cursor' | 'horizontal' | 'trend';
+
+export interface MacroEvent {
+  id: string;
+  time: number;
+  title: string;
+  description: string;
+  impact: 'high' | 'medium' | 'low';
+}
+
+export interface AIPattern {
+  id: number;
+  time: number;
+  price: number;
+  type: 'Support' | 'Resistance' | 'DoubleTop' | 'DoubleBottom' | 'Bullish' | 'Bearish';
+  label: string;
+}
 
 export interface GameState {
   isPlaying: boolean;
   speed: number;
-  cursor: number; // Current index in the data array
+  cursor: number; 
   totalBars: number;
   money: number;
   initMoney: number;
   tradeCount: number;
   winCount: number;
+  timeframe: TimeFrame;
+  startDate: string; // YYYY-MM-DD
+  showMacro: boolean;
+  showAI: boolean;
 }
