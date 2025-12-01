@@ -1,3 +1,4 @@
+
 import { SymbolInfo, BarData, MacroEvent, TimeFrame } from './types';
 
 export const SYMBOLS: SymbolInfo[] = [

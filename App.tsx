@@ -1,6 +1,7 @@
+
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { SYMBOLS, generateMarketData } from './constants';
-import { SymbolInfo, BarData, GameState, Order, Position, Marker, TradeRecord, Toast, PositionLine, DrawingTool, TrendLine, Point, TimeFrame, MacroEvent, AIPattern } from './types';
+import { SymbolInfo, BarData, GameState, Order, Position, Marker, TradeRecord, Toast, PositionLine, DrawingTool, TrendLine, Point, TimeFrame, MacroEvent, AIPattern, UserPriceLine } from './types';
 import { ChartWidget } from './components/ChartWidget';
 import { Onboarding } from './components/Onboarding';
 
@@ -77,7 +78,7 @@ const Header: React.FC<{ reset: () => void, toggleTheme: () => void, isDark: boo
     <div className="flex items-center gap-2 font-bold text-sm text-[var(--text-main)]">
       <i className="fas fa-chart-line text-[#d4af37]"></i>
       <span className="tracking-wide">期货通 PRO</span>
-      <span className="text-[10px] text-[var(--text-sub)] font-normal ml-1 border border-[var(--border)] px-1 rounded">V19.0 AI-Macro</span>
+      <span className="text-[10px] text-[var(--text-sub)] font-normal ml-1 border border-[var(--border)] px-1 rounded">V24.0 Smart-Pilot</span>
     </div>
     <div className="flex gap-2">
       <button onClick={toggleTheme} className="flex items-center gap-2 px-3 py-1 text-xs text-[var(--text-sub)] hover:bg-[var(--hover)] hover:text-[var(--text-main)] rounded transition-all">
@@ -96,17 +97,15 @@ const detectAIPatterns = (data: BarData[], cursor: number): AIPattern[] => {
   if (data.length === 0 || cursor < 20) return [];
   
   const patterns: AIPattern[] = [];
-  // Scan visual range
   const startIdx = Math.max(0, cursor - 100);
 
   for (let i = startIdx + 2; i <= cursor; i++) {
-      const c = data[i]; // Center bar
+      const c = data[i];
       const l1 = data[i-1];
       const l2 = data[i-2];
       
-      // Pivot High (Resistance)
+      // Pivot High
       if (c.high > l1.high && c.high > l2.high) {
-          // Check right side if data exists
           if (i < data.length - 1) {
              const r1 = data[i+1];
              if (r1 && c.high > r1.high) {
@@ -117,7 +116,7 @@ const detectAIPatterns = (data: BarData[], cursor: number): AIPattern[] => {
           }
       }
 
-      // Pivot Low (Support)
+      // Pivot Low
       if (c.low < l1.low && c.low < l2.low) {
          if (i < data.length - 1) {
              const r1 = data[i+1];
@@ -129,7 +128,7 @@ const detectAIPatterns = (data: BarData[], cursor: number): AIPattern[] => {
          }
       }
       
-      // Moving Average Cross
+      // MA Cross
       if (i > 10) {
           const getMA = (idx: number, period: number) => {
               let sum = 0;
@@ -183,10 +182,13 @@ const App: React.FC = () => {
   
   const [drawTool, setDrawTool] = useState<DrawingTool>('cursor');
   const [cursorMode, setCursorMode] = useState<'magnet' | 'free'>('magnet');
-  const [userLines, setUserLines] = useState<number[]>([]); 
+  const [userLines, setUserLines] = useState<UserPriceLine[]>([]); 
   const [trendLines, setTrendLines] = useState<TrendLine[]>([]); 
   const [draftPoint, setDraftPoint] = useState<Point | null>(null); 
   const [tooltip, setTooltip] = useState<{ x: number, y: number, text: string } | null>(null);
+
+  // Selection
+  const [selectedDrawing, setSelectedDrawing] = useState<{ id: number, type: 'trend' | 'price', x: number, y: number } | null>(null);
 
   const [qty, setQty] = useState(1);
   const [orderType, setOrderType] = useState<'Market'|'Limit'|'Stop'>('Market');
@@ -221,10 +223,7 @@ const App: React.FC = () => {
     setAllData(data);
     setMacroEvents(macroEvents);
     setGameState(prev => ({ ...prev, timeframe: tf, cursor: 200, isPlaying: false, totalBars }));
-    setMarkers([]);
-    setPendingOrders([]);
-    setHistory([]); 
-    setPosition(null);
+    setMarkers([]); setPendingOrders([]); setHistory([]); setPosition(null);
     showToast(`周期切换至 ${tf}, 数据已重置`, 'info');
   };
 
@@ -306,24 +305,17 @@ const App: React.FC = () => {
     return () => { if(timerRef.current) clearInterval(timerRef.current); };
   }, [gameState.speed, gameState.isPlaying, mainSymbolCode]); 
 
-  // --- Prop Computation ---
-  
-  // Trade Markers only
   const tradeMarkers = useMemo(() => {
     return markers.sort((a,b)=>a.time - b.time);
   }, [markers]);
 
-  // AI Props
   const visibleAI = useMemo(() => {
       if (!gameState.showAI || !allData[mainSymbolCode]) return [];
       return detectAIPatterns(allData[mainSymbolCode], gameState.cursor);
   }, [gameState.showAI, allData, mainSymbolCode, gameState.cursor]);
 
-  // Macro Props
   const visibleMacro = useMemo(() => {
       if (!gameState.showMacro) return [];
-      // Only show events up to current time? No, show all for replay context usually
-      // But let's show all so user can see what's coming
       return macroEvents;
   }, [gameState.showMacro, macroEvents]);
 
@@ -448,12 +440,24 @@ const App: React.FC = () => {
   };
 
   const handleChartClick = (param: { price: number, time: number, logical?: number, point?: {x: number, y: number} }) => {
-    // Note: Tooltip for Macro/AI is now handled by ChartWidget's HTML overlay hover events
-    // We only handle drawing clicks here
-    
+    // Hide context menu on background click
+    setSelectedDrawing(null);
+
+    // Default styles
+    const newColor = '#d4af37';
+    const newWidth = 2;
+    const newLocked = false;
+
     if (drawTool === 'horizontal') {
-      setUserLines(prev => [...prev, param.price]);
+      setUserLines(prev => [...prev, { 
+          id: Date.now(), 
+          price: param.price, 
+          color: newColor, 
+          lineWidth: newWidth, 
+          locked: newLocked 
+      }]);
       showToast('已绘制水平线');
+      setDrawTool('cursor'); 
     }
     else if (drawTool === 'trend') {
       const p = { time: param.time, price: param.price, logical: param.logical };
@@ -461,15 +465,71 @@ const App: React.FC = () => {
         setDraftPoint(p);
         showToast('起点已设置，请点击终点', 'info');
       } else {
-        setTrendLines(prev => [...prev, { id: Date.now(), p1: draftPoint, p2: p, color: '#d4af37' }]);
+        setTrendLines(prev => [...prev, { 
+            id: Date.now(), 
+            p1: draftPoint, 
+            p2: p, 
+            color: newColor, 
+            lineWidth: newWidth, 
+            locked: newLocked 
+        }]);
         setDraftPoint(null);
         showToast('趋势线绘制完成');
+        setDrawTool('cursor'); 
       }
     }
   };
 
+  const handleDrawingSelect = (id: number, type: 'trend' | 'price', x: number, y: number) => {
+      // ONLY allow selection if we are in cursor mode.
+      if (drawTool !== 'cursor') return;
+
+      // Adjust coordinates to keep inside screen
+      let safeX = x;
+      let safeY = y;
+      const menuWidth = 160;
+      const menuHeight = 140;
+
+      // Boundary checks
+      if (safeX + menuWidth > window.innerWidth) {
+          safeX = safeX - menuWidth - 20; 
+      } else {
+          safeX += 10;
+      }
+      
+      if (safeY + menuHeight > window.innerHeight) {
+          safeY = safeY - menuHeight - 10; 
+      } else {
+          safeY += 10;
+      }
+
+      setSelectedDrawing({ id, type, x: safeX, y: safeY });
+  };
+
+  const updateSelectedDrawing = (updates: Partial<TrendLine | UserPriceLine>) => {
+      if (!selectedDrawing) return;
+      if (selectedDrawing.type === 'trend') {
+          setTrendLines(prev => prev.map(l => l.id === selectedDrawing.id ? { ...l, ...updates } : l));
+      } else {
+          setUserLines(prev => prev.map(l => l.id === selectedDrawing.id ? { ...l, ...updates } : l));
+      }
+  };
+
+  const deleteSelectedDrawing = () => {
+      if (!selectedDrawing) return;
+      if (selectedDrawing.type === 'trend') {
+          setTrendLines(prev => prev.filter(l => l.id !== selectedDrawing.id));
+      } else {
+          setUserLines(prev => prev.filter(l => l.id !== selectedDrawing.id));
+      }
+      setSelectedDrawing(null);
+  };
+
   const clearDrawings = () => {
-    setUserLines([]); setTrendLines([]); setDraftPoint(null); showToast('画线已清除');
+    setTrendLines(prev => prev.filter(l => l.locked));
+    setUserLines(prev => prev.filter(l => l.locked));
+    setDraftPoint(null); 
+    showToast('已清除未锁定画线');
   };
 
   const handleOrderBookDbClick = (price: string) => {
@@ -525,6 +585,10 @@ const App: React.FC = () => {
     });
     return { asks, bids };
   }, [currentBar, mainSymbolCode]);
+
+  useEffect(() => {
+      setSelectedDrawing(null);
+  }, [drawTool]);
 
   return (
     <div 
@@ -589,8 +653,10 @@ const App: React.FC = () => {
                     positionLine={posLineData}
                     cursorMode={cursorMode}
                     onChartClick={handleChartClick}
+                    onSelectDrawing={handleDrawingSelect}
                     colors={mainColors}
                     theme={theme}
+                    draftPoint={draftPoint}
                  />
                )}
                <div className="absolute top-2 left-1/2 -translate-x-1/2 z-20 flex gap-2">
@@ -609,14 +675,47 @@ const App: React.FC = () => {
                    <i className="fas fa-robot"></i> AI助手
                  </button>
                </div>
-               <div className="absolute top-2 right-2 z-20 flex gap-1 transition-opacity duration-200 opacity-0 group-hover/chart1:opacity-100">
-                  <button onClick={() => setCursorMode(m => m === 'magnet' ? 'free' : 'magnet')} className={`p-1.5 rounded border ${isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100'} min-w-[26px]`}><i className={`fas fa-${cursorMode === 'magnet' ? 'magnet' : 'mouse-pointer'} text-xs`}></i></button>
-                  <div className={`w-[1px] mx-1 ${isDark ? 'bg-[#444]' : 'bg-gray-300'}`}></div>
-                  <button onClick={() => setDrawTool(t => t === 'cursor' ? 'horizontal' : 'cursor')} className={`p-1.5 rounded border ${drawTool === 'horizontal' ? 'bg-[#d4af37] text-black border-[#d4af37]' : (isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100')}`}><i className="fas fa-arrows-alt-h text-xs"></i></button>
-                  <button onClick={() => setDrawTool(t => t === 'cursor' ? 'trend' : 'cursor')} className={`p-1.5 rounded border ${drawTool === 'trend' ? 'bg-[#d4af37] text-black border-[#d4af37]' : (isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100')}`}><i className="fas fa-slash text-xs"></i></button>
-                  <button onClick={clearDrawings} className={`p-1.5 rounded border ${isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100'}`}><i className="fas fa-trash text-xs"></i></button>
+               
+               {/* Drawing Toolbar */}
+               <div className="absolute top-2 right-2 z-20 flex flex-col gap-2 items-end transition-opacity duration-200 opacity-0 group-hover/chart1:opacity-100">
+                  <div className="flex gap-1">
+                    <button onClick={() => setCursorMode(m => m === 'magnet' ? 'free' : 'magnet')} className={`p-1.5 rounded border ${isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100'} min-w-[26px]`}><i className={`fas fa-${cursorMode === 'magnet' ? 'magnet' : 'mouse-pointer'} text-xs`}></i></button>
+                    <div className={`w-[1px] mx-1 ${isDark ? 'bg-[#444]' : 'bg-gray-300'}`}></div>
+                    <button onClick={() => setDrawTool(t => t === 'horizontal' ? 'cursor' : 'horizontal')} className={`p-1.5 rounded border ${drawTool === 'horizontal' ? 'bg-[#d4af37] text-black border-[#d4af37]' : (isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100')}`}><i className="fas fa-arrows-alt-h text-xs"></i></button>
+                    <button onClick={() => setDrawTool(t => t === 'trend' ? 'cursor' : 'trend')} className={`p-1.5 rounded border ${drawTool === 'trend' ? 'bg-[#d4af37] text-black border-[#d4af37]' : (isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100')}`}><i className="fas fa-slash text-xs"></i></button>
+                    <button onClick={clearDrawings} className={`p-1.5 rounded border ${isDark ? 'bg-black/60 text-gray-300 border-[#444] hover:bg-[#333]' : 'bg-white/80 text-gray-600 border-gray-300 hover:bg-gray-100'}`}><i className="fas fa-trash text-xs"></i></button>
+                  </div>
                </div>
-               {/* Note: Tooltip for Macro/AI is now in ChartWidget overlays */}
+
+               {/* Interactive Context Menu for Selected Drawing */}
+               {selectedDrawing && (
+                   <div 
+                     className={`absolute z-[100] p-2 rounded shadow-xl border flex flex-col gap-2 animate-[scaleIn_0.1s] ${isDark ? 'bg-black/90 border-gray-600' : 'bg-white border-gray-300'}`}
+                     style={{ top: selectedDrawing.y, left: selectedDrawing.x }}
+                   >
+                       <div className="text-[10px] text-gray-500 font-bold uppercase mb-1">
+                           {selectedDrawing.type === 'trend' ? '趋势线设置' : '水平线设置'}
+                       </div>
+                       <div className="flex gap-2 items-center">
+                           {['#d4af37', '#ff4d4f', '#33ccff'].map(c => (
+                             <div key={c} onClick={() => updateSelectedDrawing({ color: c })} className={`w-5 h-5 rounded-full cursor-pointer border hover:scale-110`} style={{ backgroundColor: c }}></div>
+                           ))}
+                       </div>
+                       <div className="flex gap-2 items-center border-t border-gray-700 pt-2">
+                           {[1, 2, 4].map(w => (
+                             <div key={w} onClick={() => updateSelectedDrawing({ lineWidth: w })} className={`flex-1 h-5 flex items-center justify-center cursor-pointer text-[10px] bg-gray-700 rounded hover:bg-gray-600 text-white`}>{w}px</div>
+                           ))}
+                       </div>
+                       <div className="flex justify-between items-center border-t border-gray-700 pt-2 mt-1">
+                           <button onClick={() => updateSelectedDrawing({ locked: !((selectedDrawing.type==='trend' ? trendLines.find(l=>l.id===selectedDrawing.id) : userLines.find(l=>l.id===selectedDrawing.id))?.locked) })} className="text-gray-400 hover:text-white px-2">
+                               <i className={`fas fa-${(selectedDrawing.type==='trend' ? trendLines.find(l=>l.id===selectedDrawing.id) : userLines.find(l=>l.id===selectedDrawing.id))?.locked ? 'lock' : 'lock-open'}`}></i>
+                           </button>
+                           <button onClick={deleteSelectedDrawing} className="text-red-500 hover:text-red-400 px-2"><i className="fas fa-trash"></i></button>
+                           <button onClick={() => setSelectedDrawing(null)} className="text-gray-500 hover:text-white px-2"><i className="fas fa-times"></i></button>
+                       </div>
+                   </div>
+               )}
+
                {drawTool !== 'cursor' && <div className="absolute top-10 right-2 z-10 bg-black/70 text-[#d4af37] px-2 py-1 text-[10px] rounded border border-[#d4af37] animate-pulse pointer-events-none">{drawTool === 'horizontal' ? '点击图表绘制水平线' : (draftPoint ? '请点击第二个点' : '请点击第一个点')}</div>}
              </div>
              {mode === 'dual' && (

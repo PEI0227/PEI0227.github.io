@@ -81,6 +81,16 @@ export interface TrendLine {
   p1: Point;
   p2: Point;
   color: string;
+  lineWidth: number;
+  locked: boolean;
+}
+
+export interface UserPriceLine {
+  id: number;
+  price: number;
+  color: string;
+  lineWidth: number;
+  locked: boolean;
 }
 
 export type TimeFrame = '15m' | '1h' | '4h' | '1D';
