@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { SYMBOLS, generateMarketData } from './constants';
 import { SymbolInfo, BarData, GameState, Order, Position, Marker, TradeRecord, Toast, PositionLine, DrawingTool, TrendLine, Point, TimeFrame, MacroEvent, AIPattern, UserPriceLine } from './types';
@@ -485,23 +484,26 @@ const App: React.FC = () => {
       if (drawTool !== 'cursor') return;
 
       // Adjust coordinates to keep inside screen
-      let safeX = x;
-      let safeY = y;
-      const menuWidth = 160;
-      const menuHeight = 140;
+      const menuWidth = 170; // Slightly wider for padding
+      const menuHeight = 150;
+      const gap = 5; // Reduced gap for tighter feel
 
-      // Boundary checks
+      let safeX = x + gap;
+      let safeY = y + gap;
+
+      // Right Edge Check
       if (safeX + menuWidth > window.innerWidth) {
-          safeX = safeX - menuWidth - 20; 
-      } else {
-          safeX += 10;
+          safeX = x - menuWidth - gap;
       }
       
+      // Bottom Edge Check
       if (safeY + menuHeight > window.innerHeight) {
-          safeY = safeY - menuHeight - 10; 
-      } else {
-          safeY += 10;
+          safeY = y - menuHeight - gap;
       }
+
+      // Left/Top Guard
+      safeX = Math.max(safeX, gap);
+      safeY = Math.max(safeY, gap);
 
       setSelectedDrawing({ id, type, x: safeX, y: safeY });
   };
@@ -526,6 +528,7 @@ const App: React.FC = () => {
   };
 
   const clearDrawings = () => {
+    // Only clear unlocked lines
     setTrendLines(prev => prev.filter(l => l.locked));
     setUserLines(prev => prev.filter(l => l.locked));
     setDraftPoint(null); 
@@ -587,6 +590,7 @@ const App: React.FC = () => {
   }, [currentBar, mainSymbolCode]);
 
   useEffect(() => {
+      // Close context menu if tool changes
       setSelectedDrawing(null);
   }, [drawTool]);
 
@@ -687,7 +691,7 @@ const App: React.FC = () => {
                   </div>
                </div>
 
-               {/* Interactive Context Menu for Selected Drawing */}
+               {/* Context Menu */}
                {selectedDrawing && (
                    <div 
                      className={`absolute z-[100] p-2 rounded shadow-xl border flex flex-col gap-2 animate-[scaleIn_0.1s] ${isDark ? 'bg-black/90 border-gray-600' : 'bg-white border-gray-300'}`}

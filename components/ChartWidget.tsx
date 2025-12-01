@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { createChart, IChartApi, ISeriesApi, CandlestickSeries, HistogramSeries, LineSeries, Time, ColorType, IPriceLine, CrosshairMode, MouseEventParams, Logical, CandlestickData, Coordinate, BarPrice } from 'lightweight-charts';
 import { BarData, Marker, PositionLine, TrendLine, MacroEvent, AIPattern, UserPriceLine } from '../types';
@@ -25,7 +24,6 @@ interface ChartWidgetProps {
   theme?: 'dark' | 'light';
   onChartClick?: (param: { price: number, time: number, logical?: number, point?: {x: number, y: number} }) => void;
   onSelectDrawing?: (id: number, type: 'trend' | 'price', x: number, y: number) => void;
-  // Prop to pass draft point for visual feedback
   draftPoint?: { time: number, price: number, logical?: number } | null;
 }
 
@@ -77,12 +75,8 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
       ox1: number, oy1: number, ox2: number, oy2: number 
   }[]>([]);
   
-  // State for the temporary draft point circle
   const [draftCircle, setDraftCircle] = useState<{x: number, y: number} | null>(null);
-
   const [chartDim, setChartDim] = useState({ w: 0, h: 0 }); 
-  
-  // HTML Overlay State
   const [overlays, setOverlays] = useState<{type: 'macro'|'ai'|'marker'|'priceLineHandle', x: number, y: number, data: any}[]>([]);
 
   const latestTrendLines = useRef(trendLines);
@@ -91,12 +85,11 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
   const latestAI = useRef(aiPatterns);
   const latestMarkers = useRef(markers);
   const latestData = useRef(data);
-  const latestDraftPoint = useRef(draftPoint); // Track draft point
+  const latestDraftPoint = useRef(draftPoint);
   const onChartClickRef = useRef(onChartClick);
   const onSelectDrawingRef = useRef(onSelectDrawing);
   const cursorModeRef = useRef(cursorMode);
 
-  // Sync Props to Refs
   useEffect(() => { latestTrendLines.current = trendLines; requestAnimationFrame(updateVisuals); }, [trendLines]);
   useEffect(() => { latestPriceLines.current = priceLines; requestAnimationFrame(updateVisuals); }, [priceLines]);
   useEffect(() => { latestMacro.current = macroEvents; requestAnimationFrame(updateVisuals); }, [macroEvents]);
@@ -107,24 +100,21 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
   useEffect(() => { onSelectDrawingRef.current = onSelectDrawing; }, [onSelectDrawing]);
   useEffect(() => { cursorModeRef.current = cursorMode; }, [cursorMode]);
   
-  // Update visuals when draftPoint changes to render the first dot
   useEffect(() => { 
       latestDraftPoint.current = draftPoint; 
       requestAnimationFrame(updateVisuals); 
   }, [draftPoint]);
 
-  // Main Render Loop
   const updateVisuals = useCallback(() => {
     if (!chartRef.current || !candleSeriesRef.current || !containerRef.current) return;
     const timeScale = chartRef.current.timeScale();
     const series = candleSeriesRef.current;
     
-    // Get direct dimensions
     const rect = containerRef.current.getBoundingClientRect();
     const width = rect.width;
     const height = rect.height;
 
-    // 0. Render Draft Point (The first click of a trend line)
+    // 0. Render Draft Point
     if (latestDraftPoint.current) {
         const dp = latestDraftPoint.current;
         let x = null;
@@ -149,15 +139,12 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
     const currentLines = latestTrendLines.current || [];
     const trendSvg = currentLines.map(l => {
       let x1 = null, x2 = null;
-      
-      // Point 1
       if (l.p1.logical !== undefined) {
          const coord = timeScale.logicalToCoordinate(l.p1.logical as Logical);
          if (coord !== null) x1 = coord;
       }
       if (x1 === null && l.p1.time) x1 = timeScale.timeToCoordinate(l.p1.time as Time);
 
-      // Point 2
       if (l.p2.logical !== undefined) {
          const coord = timeScale.logicalToCoordinate(l.p2.logical as Logical);
          if (coord !== null) x2 = coord;
@@ -169,7 +156,6 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
       
       if (x1 === null || y1 === null || x2 === null || y2 === null) return null;
 
-      // --- Infinite Line Logic ---
       let ex1 = x1 as number, ey1 = y1 as number, ex2 = x2 as number, ey2 = y2 as number;
       
       if (width > 0) {
@@ -242,6 +228,18 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
             else y = series.priceToCoordinate(bar.close) || 0;
             
             if (y !== null) newOverlays.push({ type: 'marker', x, y, data: m });
+        }
+    });
+
+    (latestPriceLines.current || []).forEach(pl => {
+        const y = series.priceToCoordinate(pl.price);
+        if (y !== null) {
+            newOverlays.push({ 
+                type: 'priceLineHandle', 
+                x: width - 20, 
+                y: y, 
+                data: pl 
+            });
         }
     });
 
@@ -401,7 +399,7 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
           <button onClick={() => setActiveInd('RSI')} className={`px-2 py-0.5 text-[10px] rounded border ${activeInd === 'RSI' ? 'bg-[#9932CC]/20 text-[#9932CC] border-[#9932CC]' : 'text-gray-500 border-transparent hover:text-gray-400'}`}>RSI</button>
       </div>
 
-      {/* HTML Overlay (Macro, AI, Markers) - Z-90 */}
+      {/* HTML Overlay (Macro, AI, Markers, PriceLine Handles) - Z-90 */}
       <div className="absolute inset-0 pointer-events-none z-[90] overflow-hidden">
           {overlays.map((item, idx) => {
               if (item.type === 'macro') {
@@ -421,6 +419,11 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
                   return (
                       <div key={`ai-${idx}`} className="absolute pointer-events-auto group cursor-help" style={{ left: item.x, top: item.y, transform: 'translate(-50%, -50%)' }}>
                           <div className={`px-1.5 py-0.5 rounded text-[9px] font-bold shadow-sm border whitespace-nowrap ${isBull ? 'bg-blue-500/20 text-blue-400 border-blue-500' : (isRes ? 'bg-orange-500/20 text-orange-400 border-orange-500' : 'bg-red-500/20 text-red-400 border-red-500')}`}>{item.data.label}</div>
+                          {/* Tooltip */}
+                          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-max bg-black/90 text-white p-2 text-xs rounded border border-gray-600 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50">
+                              <div className="font-bold text-[#33ccff] mb-0.5">[AI] {item.data.label}</div>
+                              <div>{item.data.type} @ {item.data.price.toFixed(1)}</div>
+                          </div>
                       </div>
                   );
               }
@@ -436,6 +439,21 @@ export const ChartWidget: React.FC<ChartWidgetProps> = ({
                           </div>
                       </div>
                   );
+              }
+              if (item.type === 'priceLineHandle') {
+                  return (
+                      <div 
+                        key={`pl-handle-${idx}`}
+                        className="absolute pointer-events-auto cursor-pointer hover:scale-125 transition-transform"
+                        style={{ left: item.x, top: item.y, transform: 'translate(-50%, -50%)' }}
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            onSelectDrawingRef.current && onSelectDrawingRef.current(item.data.id, 'price', e.clientX, e.clientY);
+                        }}
+                      >
+                          <div className={`w-3 h-3 rounded-full border border-white shadow-sm ${item.data.locked ? 'bg-red-500' : 'bg-blue-500'}`}></div>
+                      </div>
+                  )
               }
               return null;
           })}
