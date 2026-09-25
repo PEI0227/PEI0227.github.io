@@ -1,12 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#173f35">
-  <title>中秋关西 5 日｜大阪 · 奈良 · 宇治 · 京都</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1,viewport-fit=cover" name="viewport"/>
+<meta content="light" name="color-scheme"/>
+<meta content="#173f35" name="theme-color"/>
+<title>中秋关西 5 日｜大阪 · 奈良 · 宇治 · 京都</title>
+<style>
     :root{--ink:#18221f;--muted:#64706b;--paper:#f5f2ea;--card:#fffdf8;--line:#d9ddd6;--green:#173f35;--jade:#28735f;--gold:#b87a20;--rust:#a44d35;--blue:#35637d;--soft:#e9efe9;--warn:#fff1dc;--danger:#f9e7e2;--radius:18px}
     *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:76px}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}a{color:var(--jade);text-underline-offset:3px}button{font:inherit}.shell{width:min(1120px,100%);margin:auto;padding:0 20px 84px}.hero{position:relative;margin:0 -20px 28px;padding:58px max(24px,calc((100vw - 1080px)/2)) 44px;background:var(--green);color:#fff;overflow:hidden}.hero:after{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.18);border-radius:50%;right:-55px;top:-90px;box-shadow:0 0 0 38px rgba(255,255,255,.035),0 0 0 78px rgba(255,255,255,.025)}.kicker{letter-spacing:.16em;text-transform:uppercase;font-size:12px;color:#d1e1d9}.hero h1{max-width:720px;font-size:clamp(34px,6vw,66px);line-height:1.08;margin:10px 0 16px;letter-spacing:-.04em}.hero p{max-width:720px;color:#e1ebe6;font-size:16px;margin:0}.hero-meta{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.hero-meta span,.chip{display:inline-flex;align-items:center;gap:5px;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700}.hero-meta span{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08)}.verified{position:absolute;right:max(24px,calc((100vw - 1080px)/2));bottom:46px;text-align:right;color:#c9dbd2;font-size:12px}.nav{position:sticky;top:0;z-index:30;margin:0 -10px 28px;padding:9px 10px;background:rgba(245,242,234,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(23,63,53,.1);display:flex;gap:8px;overflow:auto;scrollbar-width:none}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:700;font-size:13px;padding:8px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}.nav a:hover{color:#fff;background:var(--green);border-color:var(--green)}.section{margin:42px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:16px}.section h2{font-size:clamp(25px,4vw,38px);line-height:1.1;letter-spacing:-.03em;margin:0;color:var(--green)}.section-head p{margin:0;color:var(--muted);font-size:13px}.grid{display:grid;gap:14px}.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}.grid-4{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:19px}.card h3,.card h4{margin:0 0 8px;line-height:1.3}.card p{margin:5px 0}.small{font-size:12.5px;color:var(--muted)}.stat strong{font-size:22px;color:var(--green);display:block}.alert{display:grid;grid-template-columns:auto 1fr;gap:13px;padding:16px 18px;border-radius:14px;margin:12px 0;background:var(--warn);border:1px solid #e8c892}.alert.danger{background:var(--danger);border-color:#e1afa1}.alert.ok{background:var(--soft);border-color:#c8d9ce}.alert .mark{font-weight:900;color:var(--rust);font-size:18px}.alert strong{display:block}.route-strip{display:grid;grid-template-columns:repeat(5,1fr);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--card)}.route-day{padding:17px;border-right:1px solid var(--line);min-height:155px}.route-day:last-child{border-right:0}.route-day .date{font-weight:800;color:var(--rust);font-size:12px}.route-day h3{margin:5px 0 8px;color:var(--green);font-size:17px}.route-day p{font-size:12.5px;color:var(--muted);margin:0}.route-day .steps{display:block;margin-top:12px;font-weight:800;color:var(--blue)}.day{background:var(--card);border:1px solid var(--line);border-radius:24px;margin:22px 0;overflow:hidden}.day-head{display:grid;grid-template-columns:84px 1fr auto;gap:18px;align-items:center;padding:22px 24px;border-bottom:1px solid var(--line)}.datebox{background:var(--green);color:white;border-radius:15px;padding:11px 8px;text-align:center}.datebox b{font-size:25px;display:block;line-height:1}.datebox span{font-size:11px}.day-head h2{font-size:25px;line-height:1.2;margin:0;color:var(--green)}.day-head p{margin:4px 0 0;color:var(--muted)}.day-metrics{text-align:right;font-size:12px;color:var(--muted)}.day-metrics b{display:block;color:var(--ink);font-size:14px}.day-body{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:24px;padding:24px}.timeline{position:relative;padding-left:76px}.timeline:before{content:"";position:absolute;left:52px;top:9px;bottom:9px;width:1px;background:#bbc9c1}.stop{position:relative;padding:0 0 24px}.stop:last-child{padding-bottom:0}.stop:before{content:"";position:absolute;left:-29px;top:7px;width:9px;height:9px;border:3px solid var(--card);border-radius:50%;background:var(--jade);box-shadow:0 0 0 1px var(--jade)}.time{position:absolute;left:-76px;top:0;width:42px;text-align:right;font-weight:900;color:var(--rust);font-size:13px}.stop h3{margin:0 0 7px;font-size:17px}.stop p{margin:5px 0}.facts{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}.chip{background:#edf0ed;color:#42504a;border:1px solid #d8ded9}.chip.fee{background:#edf2f5;color:#31566b}.chip.pay{background:#e6f1ec;color:#1d6652}.chip.book{background:#fff0d6;color:#875715}.chip.cash{background:#f9e8e3;color:#963f2a}.chip.free{background:#edf3e9;color:#4b6940}.transit{border-left:3px solid var(--blue);padding:9px 11px;margin:9px 0;background:#eff4f6;border-radius:0 10px 10px 0;font-size:13px;color:#294d61}.side{display:flex;flex-direction:column;gap:12px}.side .card{border-radius:14px;padding:15px}.side h3{font-size:14px;color:var(--green)}.side ul{padding-left:18px;margin:7px 0}.side li{margin:4px 0;font-size:13px}.cut{color:var(--rust);font-weight:800}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}table{width:100%;border-collapse:collapse;min-width:720px}th,td{text-align:left;vertical-align:top;padding:12px 14px;border-bottom:1px solid var(--line)}th{background:#e9eee9;color:var(--green);font-size:12px;letter-spacing:.04em}td{font-size:13px}tr:last-child td{border-bottom:0}.todo{display:grid;gap:8px}.todo label{display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:start;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--card)}.todo input{width:18px;height:18px;accent-color:var(--jade)}.todo input:checked+span{text-decoration:line-through;color:var(--muted)}.price{font-weight:900;color:var(--rust);white-space:nowrap}.gift h3{font-size:16px}.gift .where{color:var(--muted);font-size:12px;min-height:38px}.source-list{columns:2;column-gap:30px;padding-left:20px}.source-list li{break-inside:avoid;margin:0 0 8px;font-size:13px}.print{position:fixed;right:18px;bottom:18px;border:0;border-radius:999px;background:var(--green);color:#fff;padding:11px 17px;font-weight:800;cursor:pointer;box-shadow:0 8px 24px rgba(23,63,53,.23);z-index:40}.print:hover{background:var(--jade)}footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
     .day-route{display:flex;flex-wrap:wrap;gap:7px;margin-top:9px;font-size:12px;font-weight:700}.day-route span{padding:4px 8px;border-radius:8px;background:var(--soft);color:var(--green)}.map-preview{position:relative;margin:0;border-bottom:1px solid var(--line);background:#dfe8e3;height:300px;overflow:hidden}.map-preview iframe{width:100%;height:100%;border:0}.map-preview>a{position:absolute;right:18px;bottom:16px;padding:9px 13px;border-radius:999px;background:var(--green);color:#fff;text-decoration:none;font-size:12px;font-weight:800;box-shadow:0 4px 14px rgba(23,63,53,.25)}.map-caption{position:absolute;left:16px;top:14px;background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:12px;font-weight:800}.map-links{display:grid;gap:6px}.map-links a{display:flex;justify-content:space-between;gap:8px;padding:8px 10px;border-radius:9px;background:#eff4f6;color:#294d61;text-decoration:none;font-size:12px;font-weight:750}.map-links a:after{content:"Google Maps ↗";white-space:nowrap;color:var(--jade)}.spot-detail{margin-top:9px;border-top:1px dashed var(--line);padding-top:7px;font-size:13px}.spot-detail summary{cursor:pointer;color:var(--jade);font-weight:800;list-style:none}.spot-detail summary::-webkit-details-marker{display:none}.spot-detail summary:after{content:" ＋"}.spot-detail[open] summary:after{content:" －"}.spot-detail p{color:#48544f;margin:7px 0 0}
@@ -14,323 +15,290 @@
     @media(max-width:820px){.verified{position:static;text-align:left;margin-top:14px}.grid-3,.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))}.route-strip{grid-template-columns:1fr}.route-day{border-right:0;border-bottom:1px solid var(--line);min-height:0}.route-day:last-child{border-bottom:0}.city-maps{grid-template-columns:1fr}.day-head{grid-template-columns:72px 1fr}.day-metrics{grid-column:2;text-align:left}.day-body{grid-template-columns:1fr}.side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:560px){body{font-size:14px}.shell{padding:0 12px 70px}.hero{margin:0 -12px 18px;padding:42px 18px 32px}.hero h1{font-size:38px}.nav{margin:0 -4px 22px}.grid-2,.grid-3,.grid-4,.side{grid-template-columns:1fr}.section{margin:34px 0}.section-head{display:block}.section-head p{margin-top:8px}.day{border-radius:18px}.day-head{padding:18px 16px;gap:12px}.day-head h2{font-size:20px}.day-body{padding:18px 14px}.timeline{padding-left:64px}.timeline:before{left:43px}.stop:before{left:-26px}.time{left:-66px;width:38px}.print{padding:10px 14px}.source-list{columns:1}}
     @media print{@page{size:A4;margin:12mm}body{background:white;font-size:10.5px}.shell{width:100%;padding:0}.hero{margin:0 0 8mm;padding:10mm;background:#173f35!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.hero h1{font-size:28px}.nav,.print,.map-actions,.map-dialog{display:none}.section{margin:7mm 0}.route-strip{grid-template-columns:repeat(5,1fr)}.route-day{padding:9px;min-height:0}.city-maps{grid-template-columns:repeat(2,1fr);gap:5mm}.city-map-card{break-inside:avoid}.map-canvas{print-color-adjust:exact;-webkit-print-color-adjust:exact}.day{break-before:page;break-inside:auto}.day-head{padding:12px 14px}.map-preview{height:auto;padding:8px 14px;background:#eef2ef}.map-preview iframe,.map-preview>a{display:none}.map-caption{position:static;display:block;background:transparent;border:0;padding:0}.day-body{grid-template-columns:1fr 210px;padding:14px;gap:14px}.stop{break-inside:avoid;padding-bottom:13px}.spot-detail{display:none}.side{display:flex}.card,.alert,.table-wrap{break-inside:avoid}.grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}.source-list{columns:2}a{color:inherit;text-decoration:none}.print-break{break-before:page}}
-  </style>
+  #day4 .time{position:static;display:block;width:auto;text-align:left;margin:0 0 5px;font-size:13px} #day4 .timeline{padding-left:24px} #day4 .timeline:before{left:0} #day4 .stop:before{left:-28px} #day4 details{margin-top:10px}
+</style>
 </head>
 <body>
-  <button class="print" type="button" onclick="window.print()">打印 / 保存 PDF</button>
-  <div class="shell">
-    <header class="hero" id="top">
-      <div class="kicker">Kansai · 2026 Autumn</div>
-      <h1>中秋关西 5 日<br>四城顺路攻略</h1>
-      <p>大阪 · 奈良 · 宇治 · 京都｜第一次赴日｜公共交通｜日均 1–3 万步</p>
-      <div class="hero-meta"><span>9.23—9.27</span><span>KIX 进出</span><span>ICOCA ¥10,000</span><span>现金 ¥30,000</span><span>唯一早起：9.26</span></div>
-      <div class="verified">资料核对：2026-09-22<br>临时停运与天气以出发当日为准</div>
-    </header>
-
-    <nav class="nav" aria-label="页面目录">
-      <a href="#overview">总览</a><a href="#city-maps">四城地图</a><a href="#booking">预约清单</a><a href="#day1">9.23 大阪</a><a href="#day2">9.24 大阪</a><a href="#day3">9.25 奈良·宇治</a><a href="#day4">9.26 京都</a><a href="#day5">9.27 返程</a><a href="#money">费用支付</a><a href="#gifts">伴手礼</a><a href="#sources">核对来源</a>
-    </nav>
-
-    <main>
-      <section class="section" id="overview">
-        <div class="section-head"><h2>先看全局</h2><p>确认路线优先；岚山、三千院、贵船已主动舍弃</p></div>
-        <div class="grid grid-4">
-          <article class="card stat"><span class="small">去程</span><strong>9/23 11:04</strong><span>KIX 落地</span></article>
-          <article class="card stat"><span class="small">回程</span><strong>9/27 12:35</strong><span>KIX 起飞</span></article>
-          <article class="card stat"><span class="small">住宿 · 大阪</span><strong>2 晚</strong><span>HOTEL LiVEMAX 大阪本町</span></article>
-          <article class="card stat"><span class="small">住宿 · 京都</span><strong>2 晚</strong><span>M’s Hotel Kyoto Station Kasuga</span></article>
-        </div>
-        <div class="alert danger"><div class="mark">!</div><div><strong>9/26 是高强度日，实际可能接近 3 万步。</strong>当天按“清水寺 → 金阁寺 → 银阁寺 → 南禅寺”四个锚点执行；若巴士拥堵或腿累，优先删永观堂内部参观，再删银阁寺。晚餐改为无需预约的かつくら，但建议 18:40 左右到店，避免周六排队和 20:30 最后点餐。</div></div>
-        <div class="alert ok"><div class="mark">↗</div><div><strong>四城定位图负责展示完整游览顺序，Google Maps 负责实时导航。</strong>每天的在线预览只显示一个稳定的起终点区间，避免公共交通多经停路线被 Google 错误缩放成世界地图；右侧“逐段导航”可打开每个区间并读取当时班次。打印版保留文字交通，不打印在线地图。</div></div>
-        <div class="route-strip" aria-label="五日路线概览">
-          <div class="route-day"><span class="date">DAY 1 · 9/23</span><h3>大阪北线</h3><p>KIX → 大阪城 → 中之岛 → 梅田</p><span class="steps">15k–18k 步</span></div>
-          <div class="route-day"><span class="date">DAY 2 · 9/24</span><h3>大阪南线</h3><p>黑门 → 难波八阪 → 四天王寺 → 新世界 → MAIDO 和牛放题</p><span class="steps">19k–23k 步</span></div>
-          <div class="route-day"><span class="date">DAY 3 · 9/25</span><h3>三城转场</h3><p>奈良 → 宇治 → 京都入住 → 伏见稻荷</p><span class="steps">22k–27k 步</span></div>
-          <div class="route-day"><span class="date">DAY 4 · 9/26</span><h3>京都纵贯</h3><p>东山清晨 → 金阁寺 → 银阁寺 → 南禅寺 → 祇园</p><span class="steps">26k–30k 步</span></div>
-          <div class="route-day"><span class="date">DAY 5 · 9/27</span><h3>返程</h3><p>京都站八条口 → KIX T1</p><span class="steps">低步数</span></div>
-        </div>
-      </section>
-
-      <section class="section" id="city-maps">
-        <div class="section-head"><h2>四城行程定位图</h2><p>序号就是当天游览顺序；点击地图可放大</p></div>
-        <div class="city-maps">
-          <article class="card city-map-card">
-            <header><div><h3>大阪</h3><span>9/23 北线 · 9/24 南线</span></div><span>北 ↑</span></header>
-            <svg class="map-canvas" viewBox="0 0 520 360" role="img" aria-label="大阪主要景点和游览顺序示意图">
-              <rect class="land" width="520" height="360"/><path class="district" d="M35 30H485V330H35Z"/><path class="water" d="M20 125 C120 108 215 145 325 119 S455 113 510 92"/><path class="water" d="M20 153 C130 137 222 171 330 148 S450 142 510 126"/><path class="rail" d="M244 25V340M120 280H480M65 210H455"/><path class="route-a" d="M258 195 L342 142 L260 126 L260 65 L258 195"/><path class="route-b" d="M258 195 L315 232 L196 246 L330 284 L290 309 L238 262 L258 195"/>
-              <text class="minor" x="372" y="54">大阪站／梅田</text><text class="minor" x="354" y="110">大阪城</text><text class="minor" x="66" y="125">堂岛川</text><text class="minor" x="72" y="161">土佐堀川</text><text class="minor" x="342" y="339">天王寺方向</text><text class="compass" x="474" y="31">N ↑</text>
-              <g class="pin"><circle class="pin-h" cx="258" cy="195" r="13"/><text x="258" y="195">H</text></g><text class="label" x="274" y="191">大阪本町酒店</text>
-              <g class="pin"><circle class="pin-a" cx="342" cy="142" r="13"/><text x="342" y="142">1</text></g><text class="label" x="359" y="146">大阪城</text>
-              <g class="pin"><circle class="pin-a" cx="260" cy="126" r="13"/><text x="260" y="126">2</text></g><text class="label" x="199" y="108">中之岛</text>
-              <g class="pin"><circle class="pin-a" cx="260" cy="65" r="13"/><text x="260" y="65">3</text></g><text class="label" x="278" y="69">梅田</text>
-              <g class="pin"><circle class="pin-b" cx="315" cy="232" r="13"/><text x="315" y="232">1</text></g><text class="label" x="332" y="226">黑门市场</text>
-              <g class="pin"><circle class="pin-b" cx="196" cy="246" r="13"/><text x="196" y="246">2</text></g><text class="label" x="82" y="244">难波八阪</text>
-              <g class="pin"><circle class="pin-b" cx="330" cy="284" r="13"/><text x="330" y="284">3</text></g><text class="label" x="348" y="280">四天王寺</text>
-               <g class="pin"><circle class="pin-b" cx="290" cy="309" r="13"/><text x="290" y="309">4</text></g><text class="label" x="306" y="321">新世界／通天阁外观</text>
-               <g class="pin"><circle class="pin-b" cx="238" cy="262" r="13"/><text x="238" y="262">5</text></g><text class="label" x="72" y="280">心斋桥／MAIDO／道顿堀</text>
-            </svg>
-            <div class="map-legend"><span><i style="background:var(--jade)"></i>9/23</span><span><i style="background:var(--rust)"></i>9/24</span><span><i style="background:var(--gold)"></i>酒店</span></div>
-             <div class="map-actions"><button type="button" data-map-open="大阪行程定位图">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;waypoints=%E9%BB%91%E9%97%A8%E5%B8%82%E5%9C%BA%7C%E9%9A%BE%E6%B3%A2%E5%85%AB%E9%98%AA%E7%A5%9E%E7%A4%BE%7C%E5%9B%9B%E5%A4%A9%E7%8E%8B%E5%AF%BA%7C%E9%80%9A%E5%A4%A9%E9%98%81%7C%E5%BF%83%E6%96%8B%E6%A1%A5%7CMAIDO%E5%92%8C%E7%89%9B%E7%83%A7%E8%82%89%7CDon+Quijote+%E9%81%93%E9%A1%BF%E5%A0%80%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noreferrer">Google Maps</a></div>
-          </article>
-
-          <article class="card city-map-card">
-            <header><div><h3>奈良</h3><span>9/25 上午 · 西向东步行</span></div><span>北 ↑</span></header>
-            <svg class="map-canvas" viewBox="0 0 520 360" role="img" aria-label="奈良主要景点和游览顺序示意图">
-              <rect class="land" width="520" height="360"/><path class="district" d="M35 35H485V325H35Z"/><path d="M270 45 C390 60 458 116 475 300 L305 315 C325 234 320 158 270 45Z" fill="#dce8d6"/><path class="rail" d="M84 50V322M165 35V325"/><path class="route-a" d="M166 185 L250 175 L337 148 L415 205 L337 148 L250 175 L165 270"/><text class="minor" x="360" y="88">奈良公园绿地区域</text><text class="minor" x="52" y="82">JR 线</text><text class="minor" x="172" y="82">近铁线</text><text class="compass" x="474" y="31">N ↑</text>
-              <g class="pin"><circle class="pin-a" cx="166" cy="185" r="13"/><text x="166" y="185">1</text></g><text class="label" x="92" y="166">近铁奈良站</text>
-              <g class="pin"><circle class="pin-a" cx="250" cy="175" r="13"/><text x="250" y="175">2</text></g><text class="label" x="232" y="145">奈良公园</text>
-              <g class="pin"><circle class="pin-a" cx="337" cy="148" r="13"/><text x="337" y="148">3</text></g><text class="label" x="350" y="145">东大寺</text>
-              <g class="pin"><circle class="pin-a" cx="415" cy="205" r="13"/><text x="415" y="205">4</text></g><text class="label" x="365" y="235">若草山一重目</text>
-              <g class="pin"><circle class="pin-a" cx="165" cy="270" r="13"/><text x="165" y="270">5</text></g><text class="label" x="89" y="294">取行李后到 JR 奈良站</text>
-            </svg>
-            <div class="map-legend"><span><i style="background:var(--jade)"></i>9/25 上午顺序</span><span>右侧绿色为奈良公园与山麓</span></div>
-            <div class="map-actions"><button type="button" data-map-open="奈良行程定位图">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E8%BF%91%E9%93%81%E5%A5%88%E8%89%AF%E7%AB%99&amp;destination=JR%E5%A5%88%E8%89%AF%E7%AB%99&amp;waypoints=%E5%A5%88%E8%89%AF%E5%85%AC%E5%9B%AD%7C%E4%B8%9C%E5%A4%A7%E5%AF%BA%7C%E8%8B%A5%E8%8D%89%E5%B1%B1&amp;travelmode=walking" target="_blank" rel="noreferrer">Google Maps</a></div>
-          </article>
-
-          <article class="card city-map-card">
-            <header><div><h3>宇治</h3><span>9/25 下午 · 河东到河西</span></div><span>北 ↑</span></header>
-            <svg class="map-canvas" viewBox="0 0 520 360" role="img" aria-label="宇治主要景点和游览顺序示意图">
-              <rect class="land" width="520" height="360"/><path class="district" d="M35 35H485V325H35Z"/><path class="water" d="M40 76 C185 118 220 203 480 282"/><path class="rail" d="M98 30V330M430 35L370 325"/><path class="route-a" d="M116 218 L215 178 L326 126 L375 96 L336 166 L265 220 L116 218"/><text class="minor" x="180" y="98">宇治川</text><text class="minor" x="69" y="312">JR 奈良线</text><text class="minor" x="389" y="312">京阪宇治线</text><text class="compass" x="474" y="31">N ↑</text>
-              <g class="pin"><circle class="pin-a" cx="116" cy="218" r="13"/><text x="116" y="218" style="font-size:9px">1/7</text></g><text class="label" x="58" y="246">JR 宇治站</text>
-              <g class="pin"><circle class="pin-a" cx="215" cy="178" r="13"/><text x="215" y="178">2</text></g><text class="label" x="159" y="154">宇治桥</text>
-              <g class="pin"><circle class="pin-a" cx="326" cy="126" r="13"/><text x="326" y="126">3</text></g><text class="label" x="338" y="111">宇治神社</text>
-              <g class="pin"><circle class="pin-a" cx="375" cy="96" r="13"/><text x="375" y="96">4</text></g><text class="label" x="390" y="79">宇治上神社</text>
-              <g class="pin"><circle class="pin-a" cx="336" cy="166" r="13"/><text x="336" y="166">5</text></g><text class="label" x="350" y="184">伊藤久右卫门</text>
-              <g class="pin"><circle class="pin-a" cx="265" cy="220" r="13"/><text x="265" y="220">6</text></g><text class="label" x="280" y="238">平等院</text>
-            </svg>
-            <div class="map-legend"><span><i style="background:var(--jade)"></i>9/25 下午顺序</span><span>1 与 7 均为 JR 宇治站</span></div>
-            <div class="map-actions"><button type="button" data-map-open="宇治行程定位图">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;destination=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;waypoints=%E5%AE%87%E6%B2%BB%E6%A1%A5%7C%E5%AE%87%E6%B2%BB%E7%A5%9E%E7%A4%BE%7C%E5%AE%87%E6%B2%BB%E4%B8%8A%E7%A5%9E%E7%A4%BE%7C%E4%BC%8A%E8%97%A4%E4%B9%85%E5%8F%B3%E5%8D%AB%E9%97%A8%E5%AE%87%E6%B2%BB%E6%9C%AC%E5%BA%97%7C%E5%B9%B3%E7%AD%89%E9%99%A2&amp;travelmode=walking" target="_blank" rel="noreferrer">Google Maps</a></div>
-          </article>
-
-          <article class="card city-map-card">
-            <header><div><h3>京都</h3><span>9/25 夜访 · 9/26 东山与北部</span></div><span>北 ↑</span></header>
-            <svg class="map-canvas" viewBox="0 0 520 360" role="img" aria-label="京都主要景点和游览顺序示意图">
-              <rect class="land" width="520" height="360"/><path class="district" d="M35 30H485V330H35Z"/><path d="M365 30 C420 95 442 205 468 330H520V0H388Z" fill="#dce8d6"/><path class="water" d="M315 25 C305 96 312 188 330 335"/><path class="rail" d="M35 268H486M230 25V334"/><path class="route-b" d="M250 281 L285 330 L250 281"/><path class="route-a" d="M250 281 L356 235 L380 215 L130 76 L400 92 L386 142 L371 170 L359 191 L340 221 L305 230 L250 281"/><text class="minor" x="334" y="58">东山</text><text class="minor" x="286" y="173">鸭川</text><text class="minor" x="181" y="262">京都站</text><text class="minor" x="68" y="54">西北</text><text class="compass" x="474" y="31">N ↑</text>
-              <g class="pin"><circle class="pin-h" cx="250" cy="281" r="13"/><text x="250" y="281">H</text></g><text class="label" x="137" y="306">京都站酒店</text>
-              <g class="pin"><circle class="pin-b" cx="285" cy="330" r="13"/><text x="285" y="330">1</text></g><text class="label" x="300" y="325">伏见稻荷</text>
-              <g class="pin"><circle class="pin-a" cx="356" cy="235" r="13"/><text x="356" y="235">1</text></g><text class="label" x="372" y="252">八坂塔／二三年坂</text>
-              <g class="pin"><circle class="pin-a" cx="380" cy="215" r="13"/><text x="380" y="215">2</text></g><text class="label" x="396" y="211">清水寺</text>
-              <g class="pin"><circle class="pin-a" cx="130" cy="76" r="13"/><text x="130" y="76">3</text></g><text class="label" x="145" y="71">金阁寺</text>
-              <g class="pin"><circle class="pin-a" cx="400" cy="92" r="13"/><text x="400" y="92">4</text></g><text class="label" x="414" y="88">银阁寺</text>
-              <g class="pin"><circle class="pin-a" cx="386" cy="142" r="13"/><text x="386" y="142">5</text></g><text class="label" x="399" y="143">哲学之道</text>
-              <g class="pin"><circle class="pin-a" cx="371" cy="170" r="13"/><text x="371" y="170">6</text></g><text class="label" x="385" y="173">永观堂</text>
-              <g class="pin"><circle class="pin-a" cx="359" cy="191" r="13"/><text x="359" y="191">7</text></g><text class="label" x="373" y="194">南禅寺</text>
-              <g class="pin"><circle class="pin-a" cx="340" cy="221" r="13"/><text x="340" y="221">8</text></g><text class="label" x="266" y="209">祇园</text>
-               <g class="pin"><circle class="pin-a" cx="305" cy="230" r="13"/><text x="305" y="230">9</text></g><text class="label" x="208" y="242">鸭川／かつくら</text>
-            </svg>
-            <div class="map-legend"><span><i style="background:var(--rust)"></i>9/25 夜访</span><span><i style="background:var(--jade)"></i>9/26 顺序</span><span><i style="background:var(--gold)"></i>酒店</span></div>
-             <div class="map-actions"><button type="button" data-map-open="京都行程定位图">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;waypoints=%E5%85%AB%E5%9D%82%E5%A1%94%7C%E6%B8%85%E6%B0%B4%E5%AF%BA%7C%E9%87%91%E9%98%81%E5%AF%BA%7C%E9%93%B6%E9%98%81%E5%AF%BA%7C%E5%93%B2%E5%AD%A6%E4%B9%8B%E9%81%93%7C%E6%B0%B8%E8%A7%82%E5%A0%82%7C%E5%8D%97%E7%A6%85%E5%AF%BA%7C%E7%A5%87%E5%9B%AD%7C%E5%90%8D%E4%BB%A3%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4+%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noreferrer">Google Maps</a></div>
-          </article>
-        </div>
-        <p class="map-note">定位图按真实方位关系简化绘制，便于快速判断景点集中区域和游览先后；距离、换乘与临时封路仍以每张图下方的 Google Maps 及当天站牌为准。</p>
-      </section>
-
-      <section class="section" id="booking">
-        <div class="section-head"><h2>现在要办的 2 件事</h2><p>勾选状态会保存在本机浏览器</p></div>
-        <div class="todo">
-          <label><input type="checkbox" data-save="maido"><span><b>MAIDO 和牛焼肉 9/24 17:30</b><br><small>道顿堀店，建议提前订位。官网当前黑毛和牛放题含软饮 ¥5,000；预约页面若显示不同套餐或价格，以订单确认页为准。</small></span><a href="https://maidowagyuyakiniku.com/menu/" target="_blank" rel="noreferrer">官网</a></label>
-          <label><input type="checkbox" data-save="bus"><span><b>京都站 → KIX 9/27 07:20 班</b><br><small>全便指定席；乘车前一个月开放预约。¥2,800，8:48 到 T1。</small></span><a href="https://www.kate.co.jp/timetable/detail/KY" target="_blank" rel="noreferrer">时刻表</a></label>
-        </div>
-        <div class="alert ok"><div class="mark">✓</div><div><strong>现场处理即可</strong>大阪城、寺院、东大寺、若草山、平等院庭园均不需要提前预约。かつくら四条寺町店不接受预约，按到店顺序排队；面屋猪一也不接受预约，晚市需 16:00 起领取当日整理券。</div></div>
-      </section>
-
-      <article class="day" id="day1">
-        <header class="day-head"><div class="datebox"><span>WED</span><b>23</b><span>SEP</span></div><div><h2>抵达大阪 · 大阪城、中之岛、梅田</h2><p>秋分日｜落地后的轻强度城市线</p><div class="day-route"><span>起点：KIX T1</span><span>市内起点：HOTEL LiVEMAX 大阪本町</span><span>终点：HOTEL LiVEMAX 大阪本町</span></div></div><div class="day-metrics"><b>15k–18k 步</b>夜宿大阪本町</div></header>
-        <div class="map-preview"><iframe loading="lazy" title="9月23日 Google Maps 路线预览" src="https://maps.google.com/maps?saddr=Kansai+International+Airport&amp;daddr=HOTEL+LiVEMAX+Osaka+Honmachi&amp;dirflg=r&amp;output=embed"></iframe><span class="map-caption">稳定预览：KIX → 大阪本町酒店｜市内顺序见四城地图</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kansai+International+Airport&amp;destination=HOTEL+LiVEMAX+Osaka+Honmachi&amp;travelmode=transit" target="_blank" rel="noreferrer">在 Google Maps 打开</a></div>
-        <div class="day-body">
-          <div class="timeline">
-            <section class="stop"><span class="time">11:04</span><h3>KIX T1 落地</h3><p>第一次入境按 75–95 分钟预留。提前完成 Visit Japan Web，拿到行李后直接上 2F 铁路层。</p></section>
-            <section class="stop"><span class="time">12:40</span><h3>南海空港急行 → 难波 → 本町</h3><div class="transit">关西机场 → 南海难波约 45 分 / ¥970；换 Osaka Metro 御堂筋线至本町，1 区 ¥190。均可刷 ICOCA，不需预约。</div><p>若错过计划班次，空港急行白天班次密，直接坐下一班；不必为 Rapi:t 等座。</p></section>
-            <section class="stop"><span class="time">14:00</span><h3>酒店寄存 / 入住</h3><div class="facts"><span class="chip">入住 15:00</span><span class="chip">最晚 22:30</span><span class="chip pay">Mastercard / IC / 支付宝微信</span></div><p>HOTEL LiVEMAX 大阪本町，久太郎町 3-1-13。早到先寄存。</p></section>
-            <section class="stop"><span class="time">14:40</span><h3>大阪城公园 → 天守阁</h3><div class="transit">本町 → 森ノ宮（中央线），从公园东南侧进入；天守阁后往西侧离开。</div><div class="facts"><span class="chip">09:00–18:00</span><span class="chip fee">成人 ¥1,200</span><span class="chip pay">卡 / ICOCA / 支付宝 / 微信</span><span class="chip">最晚 17:30</span></div><p>丰臣秀吉时代大阪权力中心的现代复原天守，馆内以大阪城与战国史展览为主，顶层可看城市全景。公园免费；延误超过 90 分钟时只看外观。</p><details class="spot-detail"><summary>展开了解大阪城</summary><p>现天守于 1931 年重建，内部是博物馆，并非保存至今的原始城楼。重点可看丰臣秀吉、大坂冬之阵与夏之阵的展陈；城墙、护城河和巨石也很值得留意。个人不需预约时段，电子票可减少排队。</p><p><b>现场看点：</b>从森之宫进入会先经过宽阔公园，再逐渐看到石垣与内护城河。馆内可先上高层确认城市方位，再从上往下看展；若排队很长，外部樱门、蛸石和水面城景同样值得停留。</p></details></section>
-            <section class="stop"><span class="time">17:00</span><h3>中之岛河畔散步</h3><div class="transit">大阪城西侧 → 天满桥；沿河向中央公会堂、中之岛公园走，再到淀屋桥。</div><div class="facts"><span class="chip free">免费</span><span class="chip">户外全天</span></div><p>堂岛川与土佐堀川之间的城市岛洲，适合看水岸、玫瑰园和红砖中央公会堂外观。</p><details class="spot-detail"><summary>展开了解中之岛</summary><p>中之岛集中了大阪的行政、文化和近代建筑。中央公会堂是 1918 年落成的地标；本行程只安排户外散步，能控制时间，也能在傍晚欣赏河岸灯光。</p><p><b>现场看点：</b>中央公会堂红砖外观、大阪府立中之岛图书馆古典立面和玫瑰园位于同一河岛轴线上。沿南岸往淀屋桥走，能同时看到桥梁、办公楼灯光和水面倒影。</p></details></section>
-            <section class="stop"><span class="time">18:30</span><h3>梅田晚餐与大阪站商圈</h3><div class="transit">淀屋桥 → 梅田（御堂筋线 ¥190）。</div><p>逛大阪站、LUCUA、Grand Front。晚餐可选大阪烧ゆかり曽根崎本店，预算 ¥2,000–3,000；不强制排梅田蓝天大厦。</p></section>
-            <section class="stop"><span class="time">21:30</span><h3>梅田 → 大阪本町酒店</h3><div class="transit">Osaka Metro 御堂筋线：梅田 → 本町，约 5 分 / ¥190；本町站 12 号口步行约 2 分钟回酒店。</div><p>这是当天明确的终点。建议 22:00 前回房，完全不需要卡地铁末班。</p></section>
-          </div>
-          <aside class="side">
-            <div class="card"><h3>延误删减顺序</h3><ol><li>先删中之岛</li><li>16:45 后不再买大阪城票</li><li>直接去梅田吃饭</li></ol></div>
-            <div class="card"><h3>支付提示</h3><p class="small">大阪城的官方收款方式最完整。小店仍不要默认支持支付宝/微信。</p></div>
-            <div class="card"><h3>末班安全</h3><p class="small">本日建议 21:30–22:00 回酒店，远早于地铁末班；无需靠末班时间规划。</p></div>
-            <div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%85%B3%E8%A5%BF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">KIX → 大阪酒店</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%A4%A9%E5%AE%88%E9%98%81&amp;travelmode=transit" target="_blank" rel="noreferrer">酒店 → 大阪城</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%A4%A9%E5%AE%88%E9%98%81&amp;destination=%E4%B8%AD%E4%B9%8B%E5%B2%9B%E5%85%AC%E5%9B%AD&amp;travelmode=walking" target="_blank" rel="noreferrer">大阪城 → 中之岛</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%AD%E4%B9%8B%E5%B2%9B%E5%85%AC%E5%9B%AD&amp;destination=%E5%A4%A7%E9%98%AA%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noreferrer">中之岛 → 梅田</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%A4%A7%E9%98%AA%E7%AB%99&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">梅田 → 酒店</a></div></div>
-          </aside>
-        </div>
-      </article>
-
-      <article class="day" id="day2">
-        <header class="day-head"><div class="datebox"><span>THU</span><b>24</b><span>SEP</span></div><div><h2>大阪南线 · 市场、新世界与和牛放题</h2><p>通天阁只看外观，把时间与胃口留给 MAIDO</p><div class="day-route"><span>起点：HOTEL LiVEMAX 大阪本町</span><span>终点：HOTEL LiVEMAX 大阪本町</span></div></div><div class="day-metrics"><b>19k–23k 步</b>夜宿大阪本町</div></header>
-        <div class="map-preview"><iframe loading="lazy" title="9月24日 Google Maps 路线预览" src="https://maps.google.com/maps?saddr=HOTEL+LiVEMAX+Osaka+Honmachi&amp;daddr=Don+Quijote+Dotonbori&amp;dirflg=r&amp;output=embed"></iframe><span class="map-caption">稳定预览：大阪酒店 → 道顿堀｜中间景点按逐段导航</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+Osaka+Honmachi&amp;destination=Don+Quijote+Dotonbori&amp;travelmode=transit" target="_blank" rel="noreferrer">在 Google Maps 打开</a></div>
-        <div class="day-body">
-          <div class="timeline">
-            <section class="stop"><span class="time">08:00</span><h3>大阪本町酒店出发</h3><div class="transit">本町 → なんば（御堂筋线，约 4 分 / ¥190），再步行约 8–10 分钟到黑门市场；也可按实时导航从堺筋本町换乘。</div><p>退房留到明天；轻装出发，早餐放在黑门市场解决。</p></section>
-            <section class="stop"><span class="time">08:30</span><h3>黑门市场早餐</h3><div class="facts"><span class="chip">店铺约 09:00 起</span><span class="chip cash">小摊多现金</span><span class="chip fee">预算 ¥1,500–2,500</span></div><p>有“大阪厨房”之称的传统市场，海鲜、肉类、蔬果和熟食集中，适合少量多样地吃早餐。</p><details class="spot-detail"><summary>展开了解黑门市场</summary><p>黑门市场形成于江户末期，名称来自附近圆明寺的黑色山门。约 580 米的拱廊内分布着鲜鱼店、河豚料理、和牛、玉子烧、水果及干货店，既服务当地餐饮业，也发展成热门观光市场。</p><p><b>怎么逛：</b>商户独立营业，没有统一开门时间，09:00 后选择更多。从北侧或日本桥一侧进入，刺身、扇贝、玉子烧和当季水果择二三项即可。先看清计价单位和座位规则再下单，不要在通道中央边走边吃。</p></details></section>
-            <section class="stop"><span class="time">10:00</span><h3>难波八阪神社</h3><div class="facts"><span class="chip">大门 06:00–17:00</span><span class="chip">授与所约 09:00–16:50</span><span class="chip free">免费</span></div><p>以张口吞邪的巨大狮子殿闻名，体量震撼，预留 30 分钟。</p><details class="spot-detail"><summary>展开了解狮子殿</summary><p>狮子殿高约 12 米、宽约 11 米，舞台位于狮口内。民间认为巨口能吞走厄运、带来胜运与学业运，因此常有考生和生意人参拜。</p><p><b>现场看点：</b>狮子的眼睛装有灯光，鼻部设有扬声器，节庆时会作为舞台使用。正面低角度最能表现巨口尺度；本殿规模不大，参拜与拍照约 20–30 分钟即可。</p></details></section>
-            <section class="stop"><span class="time">10:45</span><h3>りくろーおじさん难波本店</h3><div class="facts"><span class="chip">09:00–20:00</span><span class="chip pay">信用卡</span><span class="chip">不可预约</span></div><p>现烤芝士蛋糕适合旅途中吃；送人优先薪パイ 8 根 ¥980 或黄油曲奇 8 枚 ¥830。</p></section>
-            <section class="stop"><span class="time">11:35</span><h3>四天王寺</h3><div class="transit">难波/日本桥一带 → 四天王寺前夕阳ヶ丘，再步行约 7 分钟。</div><div class="facts"><span class="chip">彼岸会 08:00–17:00</span><span class="chip free">中心伽蓝当日免费</span><span class="chip cash">现金备用</span></div><p>相传由圣德太子于 593 年创建，是日本早期官寺代表。<b>9/24 正值秋季彼岸会</b>，中心伽蓝免费且延长开放。</p><details class="spot-detail"><summary>展开了解四天王寺</summary><p>中心伽蓝以中门、五重塔、金堂和讲堂南北排成一直线，常被称为“四天王寺式伽蓝配置”。建筑历经灾害多次重建，但寺院格局和信仰延续至今。</p><p><b>现场看点：</b>先看石鸟居，再进入中心伽蓝观察笔直中轴。彼岸会期间会有参拜、法要与摊位，人流比普通工作日更密；保持通道畅通，遇到仪式时从侧面安静观看。</p></details></section>
-            <section class="stop"><span class="time">13:00</span><h3>新世界轻食 → 通天阁外观</h3><div class="facts"><span class="chip free">街区与外观免费</span><span class="chip">停留 45–60 分</span><span class="chip fee">小吃 ¥500–1,000</span></div><p>晚上安排和牛放题，这里只尝 1–2 串串炸或一份小吃，不吃完整午餐。逛新世界商店街，在街面拍通天阁，不购买展望台门票。</p><details class="spot-detail"><summary>展开了解新世界与通天阁</summary><p>新世界在 20 世纪初以现代娱乐区为目标开发，街区招牌、串炸店和通天阁共同构成大阪南部最鲜明的复古景观。初代通天阁建于 1912 年，现塔于 1956 年落成，是战后大阪复兴的地标。</p><p><b>本次看法：</b>从ジャンジャン横丁走向通天阁本通，在街口拍塔与招牌同框，再绕到塔脚即可。取消登塔后可省下约 60–90 分钟和 ¥1,500，也避免下午排队。</p></details></section>
-            <section class="stop"><span class="time">14:15</span><h3>心斋桥筋散步与购物</h3><div class="transit">惠美须町 → 长堀桥（堺筋线），再步行到心斋桥筋；约 15–20 分 / ¥190。</div><p>从心斋桥往南逛到戎桥与道顿堀，途中以服饰、药妆和咖啡休息为主，17:15 前往 MAIDO。</p><details class="spot-detail"><summary>展开了解心斋桥与道顿堀</summary><p>心斋桥筋有顶棚，历史可追溯到长堀川桥梁周边形成的商业街；道顿堀则从戏院和娱乐街发展成餐饮与巨型招牌密集的夜间地标。</p><p><b>怎么逛：</b>从长堀桥进入心斋桥筋，依次经过心斋桥、戎桥和道顿堀运河。MAIDO 位于道顿堀 1 丁目 10-7 ぼんちビル 5F，从大阪 Metro 难波站 14 号出口步行约 4 分钟。</p></details></section>
-            <section class="stop"><span class="time">17:30</span><h3>MAIDO 和牛焼肉 · 黑毛和牛放题</h3><div class="facts"><span class="chip book">建议提前订位</span><span class="chip">12:00–24:00</span><span class="chip fee">含软饮 ¥5,000</span><span class="chip pay">Visa / Mastercard / JCB / Amex</span></div><p>官网当前“黑毛和牛食べ放題＋软饮放题”标价 ¥5,000 含税，包含多种和牛腹肉、里脊、牛排与配菜。预约平台可能显示不同套餐或价格，下单前核对套餐名、人数与最终金额。</p><details class="spot-detail"><summary>展开了解用餐安排</summary><p>这是当日主餐，建议按 90–120 分钟留出时间。先点少量招牌和牛部位试味，再按喜好续单，避免一次下单过多；饮酒套餐、特别部位和未列入放题的单点是否加价，以当日菜单为准。</p><p><b>支付：</b>官网明确列出主流信用卡，未确认支付宝、微信和交通 IC。优先刷 Mastercard 并选择 JPY；同时携带现金作为备用。</p></details></section>
-            <section class="stop"><span class="time">19:30</span><h3>道顿堀夜景 → Don Quijote</h3><div class="facts"><span class="chip">Donki 24 小时</span><span class="chip pay">信用卡 / IC / 银联</span><span class="chip">免税服务</span></div><p>饭后沿道顿堀运河散步，在戎桥看亮灯，再到 Don Quijote 道顿堀店。购物控制在 60–90 分钟，药妆、日用品和常温零食集中购买。</p></section>
-            <section class="stop"><span class="time">21:30</span><h3>道顿堀 → 大阪本町酒店</h3><div class="transit">步行到难波站，御堂筋线 なんば → 本町，约 4 分 / ¥190；再从 12 号口步行回酒店。</div><p>Donki 是 24 小时，但不建议逛到末班车附近；22:00 左右回到酒店最从容。</p></section>
-          </div>
-          <aside class="side">
-            <div class="card"><h3>当日特殊信息</h3><p class="small">四天王寺处于秋季彼岸会，不按原文件的“普通日 08:30–16:30、¥500”执行。</p></div>
-            <div class="card"><h3>堂吉诃德</h3><p class="small">选择官方确认 24 小时的“道顿堀店”（宗右卫门町 7-13）。免税规则和现场可用 QR 品牌以收银台为准。</p></div>
-            <div class="card"><h3>交通票</h3><p class="small">今天地铁次数较多，可现场比较 Osaka Metro 一日券；普通单程 1 区自 ¥190 起。不要购买已停售的京都“巴士一日券”。</p></div>
-            <div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=%E9%BB%91%E9%97%A8%E5%B8%82%E5%9C%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">酒店 → 黑门市场</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%BB%91%E9%97%A8%E5%B8%82%E5%9C%BA&amp;destination=%E9%9A%BE%E6%B3%A2%E5%85%AB%E9%98%AA%E7%A5%9E%E7%A4%BE&amp;travelmode=walking" target="_blank" rel="noreferrer">黑门 → 难波八阪</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%9A%BE%E6%B3%A2%E5%85%AB%E9%98%AA%E7%A5%9E%E7%A4%BE&amp;destination=%E5%9B%9B%E5%A4%A9%E7%8E%8B%E5%AF%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">难波八阪 → 四天王寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%9B%9B%E5%A4%A9%E7%8E%8B%E5%AF%BA&amp;destination=%E9%80%9A%E5%A4%A9%E9%98%81&amp;travelmode=walking" target="_blank" rel="noreferrer">四天王寺 → 新世界</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%80%9A%E5%A4%A9%E9%98%81&amp;destination=%E5%BF%83%E6%96%8B%E6%A1%A5&amp;travelmode=transit" target="_blank" rel="noreferrer">新世界 → 心斋桥</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%BF%83%E6%96%8B%E6%A1%A5&amp;destination=MAIDO%E5%92%8C%E7%89%9B%E7%83%A7%E8%82%89&amp;travelmode=walking" target="_blank" rel="noreferrer">心斋桥 → MAIDO</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=MAIDO%E5%92%8C%E7%89%9B%E7%83%A7%E8%82%89&amp;destination=Don+Quijote+%E9%81%93%E9%A1%BF%E5%A0%80%E5%BA%97&amp;travelmode=walking" target="_blank" rel="noreferrer">MAIDO → 道顿堀 Donki</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Don+Quijote+%E9%81%93%E9%A1%BF%E5%A0%80%E5%BA%97&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">Donki → 酒店</a></div></div>
-          </aside>
-        </div>
-      </article>
-
-      <article class="day" id="day3">
-        <header class="day-head"><div class="datebox"><span>FRI</span><b>25</b><span>SEP</span></div><div><h2>奈良 → 宇治 → 京都入住 → 伏见稻荷</h2><p>转场日｜全程铁路走廊，不回头</p><div class="day-route"><span>起点：HOTEL LiVEMAX 大阪本町</span><span>终点：M’s Hotel Kyoto Station Kasuga</span></div></div><div class="day-metrics"><b>22k–27k 步</b>夜宿京都站</div></header>
-        <div class="map-preview"><iframe loading="lazy" title="9月25日 Google Maps 路线预览" src="https://maps.google.com/maps?saddr=HOTEL+LiVEMAX+Osaka+Honmachi&amp;daddr=M%27s+Hotel+Kyoto+Station+Kasuga&amp;dirflg=r&amp;output=embed"></iframe><span class="map-caption">稳定预览：大阪酒店 → 京都酒店｜奈良、宇治按逐段导航</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+Osaka+Honmachi&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" target="_blank" rel="noreferrer">在 Google Maps 打开</a></div>
-        <div class="day-body">
-          <div class="timeline">
-            <section class="stop"><span class="time">07:10</span><h3>退房，前往近铁奈良</h3><div class="transit">本町 → なんば；大阪难波 → 近铁奈良，快速急行约 36–40 分 / ¥680，ICOCA，不需预约。</div><p>抵达后第一件事在近铁奈良站存大件行李，大柜按 ¥700–1,000 预留；旺季满柜时用站内人工寄存/附近寄存点。</p></section>
-            <section class="stop"><span class="time">08:35</span><h3>奈良公园 → 东大寺大佛殿</h3><div class="facts"><span class="chip free">公园免费</span><span class="chip">东大寺 07:30–17:30</span><span class="chip fee">¥800</span><span class="chip cash">东大寺仅现金</span></div><p>奈良公园以自由活动的鹿闻名；东大寺大佛殿供奉约 15 米高的卢舍那佛。沿南大门进入参观。</p><details class="spot-detail"><summary>展开了解奈良鹿与东大寺</summary><p>春日大社传说中，鹿是神明的使者，今天仍受到保护。东大寺由圣武天皇推动建立，是奈良时代国家佛教的重要中心；现大佛殿虽为江户时代重建，规模依然惊人。</p><p><b>现场看点：</b>南大门两侧有金刚力士像，进入大佛殿后可留意卢舍那佛、两侧菩萨与殿柱孔。鹿仙贝约 ¥200；喂完摊开双手，9–11 月公鹿发情期尤其不要追逐、抚角或挑逗。</p></details></section>
-            <section class="stop"><span class="time">10:20</span><h3>若草山一重目</h3><div class="facts"><span class="chip">09:00–17:00</span><span class="chip fee">¥150</span><span class="chip cash">现金</span></div><p>草坡开阔、可俯瞰奈良盆地；只到第一观景区域，不登 342 米山顶。</p><details class="spot-detail"><summary>展开了解若草山</summary><p>若草山由三重草坡组成，整座山覆以草地，以每年冬季的烧山仪式闻名。山麓与一重目之间坡度已经明显，但一重目就能得到很好的城市与寺院视野。</p><p><b>怎么走：</b>从东大寺东北方向到南门或北门售票口，按“一重目”标识上行。草坡遮阴少，晴天注意补水；当天还要转场宇治，无论是否拍够，11:20 都开始折返。</p></details></section>
-            <section class="stop"><span class="time">11:45</span><h3>奈良快速午餐</h3><p>柿叶寿司本舗たなか奈良本店 09:00–19:00，茶屋 11:00–16:00；预算 ¥1,000–2,000。12:25 前取行李，步行至 JR 奈良站。</p></section>
-            <section class="stop"><span class="time">13:00</span><h3>JR 奈良 → JR 宇治</h3><div class="transit">JR 奈良线直达约 39 分 / ¥510，ICOCA；到站存行李。</div></section>
-            <section class="stop"><span class="time">13:50</span><h3>宇治桥、宇治川 → 宇治神社 → 宇治上神社</h3><div class="facts"><span class="chip free">免费</span><span class="chip">宇治上神社约 16:00 闭门</span><span class="chip">宇治神社御守至 16:30</span></div><p>宇治川两岸串起古社与茶文化；先走河东岸两社，约 35–45 分钟。</p><details class="spot-detail"><summary>展开了解宇治桥与两座神社</summary><p>宇治桥是日本古桥之一，也是《源氏物语》“宇治十帖”的重要舞台意象。宇治上神社是世界文化遗产，本殿被认为是日本现存很早的神社建筑；相邻宇治神社则以“回首兔”传说闻名。</p><p><b>现场看点：</b>从桥上看宇治川、中之岛与两岸山色，再沿东岸依次参拜宇治神社和宇治上神社。两社过去关系密切，建筑气质却不同；先访两社还能避开较早闭门时间。</p></details></section>
-            <section class="stop"><span class="time">15:00</span><h3>伊藤久右卫门宇治本店</h3><div class="facts"><span class="chip">10:00–18:00</span><span class="chip">茶房 L.O. 17:30</span><span class="chip pay">Mastercard / ICOCA / 微信 / 支付宝</span><span class="chip fee">蒙布朗抹茶圣代 ¥1,390</span></div><p>创立于江户后期的宇治茶老铺，本店可集中体验抹茶甜品、选茶和伴手礼。</p><details class="spot-detail"><summary>展开了解宇治茶与本店</summary><p>宇治茶并不只指产自宇治市内的茶，而是一套以京都府南部为核心、长期形成的栽培与加工传统。抹茶由碾茶磨粉制成，玉露强调覆下栽培带来的鲜味，煎茶则更清爽日常。</p><p><b>怎么买：</b>先决定送礼还是自用，再请店员比较抹茶点心、煎茶与玉露的保存方式。茶房排队超过 20 分钟就改为购买抹茶冰品或常温点心，不影响 16:00 进入平等院。</p></details></section>
-            <section class="stop"><span class="time">16:00</span><h3>平等院庭园 + 凤翔馆</h3><div class="facts"><span class="chip">庭园 08:45–17:30</span><span class="chip">最晚入园 17:15</span><span class="chip fee">¥700</span><span class="chip pay">主票可无现金</span></div><p>凤凰堂是十日元硬币图案原型，也是平安时代净土庭园的代表。参观外观、庭园和凤翔馆。</p><details class="spot-detail"><summary>展开了解平等院</summary><p>藤原赖通于 1052 年将别业改为寺院，凤凰堂翌年建成，中堂供奉阿弥陀如来。倒映水面的对称构图象征极乐净土；屋顶凤凰图案也出现在一万日元纸币上。</p><p><b>现场看点：</b>先从阿字池正面看十日元硬币同款构图，再沿池边绕行，最后进入凤翔馆看原凤凰、云中供养菩萨与文物。9/25 仍在夏季限流期，本路线不排凤凰堂内部参拜。</p></details></section>
-            <section class="stop"><span class="time">17:25</span><h3>JR 宇治 → 京都，酒店入住</h3><div class="transit">JR 奈良线至京都约 17–25 分 / ¥240；八条口步行约 7 分钟至酒店。</div><p>M’s Hotel Kyoto Station Kasuga 16:00 起入住、10:00 退房，支持 Mastercard。</p></section>
-            <section class="stop"><span class="time">18:30</span><h3>伏见稻荷大社夜访</h3><div class="transit">京都 → JR 稻荷约 5 分；普通列车才停稻荷站。回程班次到深夜，本计划 20:15 左右离开。</div><div class="facts"><span class="chip free">境内 24 小时</span><span class="chip free">免费</span><span class="chip">无需预约</span></div><p>全国约三万座稻荷神社的总本宫，以连绵朱红鸟居闻名；夜访只走到奥社奉拜所。</p><details class="spot-detail"><summary>展开了解千本鸟居</summary><p>稻荷信仰与五谷丰登、商业兴旺相关，狐狸被视为稻荷神的使者。鸟居多由个人或企业奉纳，背面可看到奉纳者与日期，密集排列后形成朱红色隧道。</p><p><b>夜访范围：</b>楼门、本殿、千本鸟居与奥社奉拜所往返 60–80 分钟。奥社的“おもかる石”可体验许愿传统；主路有照明，但继续登山会更暗且耗时，本行程到奥社即原路返回。</p></details></section>
-            <section class="stop"><span class="time">20:15</span><h3>JR 稻荷 → 京都站 → 京都酒店</h3><div class="transit">JR 奈良线普通列车：稻荷 → 京都约 5 分 / ¥150；在京都站用餐后，从八条西口步行约 7 分钟回酒店。</div><p>当天终点是 M’s Hotel Kyoto Station Kasuga。建议 21:30–22:00 回房，为第二天唯一一次早起留睡眠。</p></section>
-          </div>
-          <aside class="side">
-            <div class="card"><h3>当天硬截止</h3><ul><li>11:20 若草山下撤</li><li>13:00 左右离开奈良</li><li>16:00 前到平等院</li></ul></div>
-            <div class="card"><h3>下雨方案</h3><p class="small">删若草山，奈良公园与东大寺照常；多出的时间给宇治茶房和博物馆。</p></div>
-            <div class="card"><h3>行李</h3><p class="small">近铁奈良和 JR 宇治各存一次。预算 ¥1,400–2,000；准备现金与 ¥100 硬币。</p></div>
-            <div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=%E8%BF%91%E9%93%81%E5%A5%88%E8%89%AF%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noreferrer">大阪酒店 → 近铁奈良</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E8%BF%91%E9%93%81%E5%A5%88%E8%89%AF%E7%AB%99&amp;destination=%E8%8B%A5%E8%8D%89%E5%B1%B1&amp;waypoints=%E4%B8%9C%E5%A4%A7%E5%AF%BA&amp;travelmode=walking" target="_blank" rel="noreferrer">奈良站 → 东大寺 → 若草山</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%A5%88%E8%89%AF%E7%AB%99&amp;destination=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;travelmode=transit" target="_blank" rel="noreferrer">JR 奈良 → JR 宇治</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;destination=%E5%B9%B3%E7%AD%89%E9%99%A2&amp;waypoints=%E5%AE%87%E6%B2%BB%E4%B8%8A%E7%A5%9E%E7%A4%BE%7C%E4%BC%8A%E8%97%A4%E4%B9%85%E5%8F%B3%E5%8D%AB%E9%97%A8%E5%AE%87%E6%B2%BB%E6%9C%AC%E5%BA%97&amp;travelmode=walking" target="_blank" rel="noreferrer">宇治步行线</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" target="_blank" rel="noreferrer">宇治 → 京都酒店</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=%E4%BC%8F%E8%A7%81%E7%A8%BB%E8%8D%B7%E5%A4%A7%E7%A4%BE&amp;travelmode=transit" target="_blank" rel="noreferrer">酒店 → 伏见稻荷</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BC%8F%E8%A7%81%E7%A8%BB%E8%8D%B7%E5%A4%A7%E7%A4%BE&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" target="_blank" rel="noreferrer">伏见稻荷 → 酒店</a></div></div>
-          </aside>
-        </div>
-      </article>
-
-      <article class="day" id="day4">
-        <header class="day-head"><div class="datebox"><span>SAT</span><b>26</b><span>SEP</span></div><div><h2>京都核心 · 东山清晨到金阁、银阁</h2><p>唯一早起日｜代表性优先，留出删减阀门</p><div class="day-route"><span>起点：M’s Hotel Kyoto Station Kasuga</span><span>终点：M’s Hotel Kyoto Station Kasuga</span></div></div><div class="day-metrics"><b>26k–30k 步</b>高强度</div></header>
-        <div class="map-preview"><iframe loading="lazy" title="9月26日 Google Maps 路线预览" src="https://maps.google.com/maps?saddr=M%27s+Hotel+Kyoto+Station+Kasuga&amp;daddr=Katsukura+Shijo+Teramachi&amp;dirflg=r&amp;output=embed"></iframe><span class="map-caption">稳定预览：京都酒店 → かつくら四条寺町｜全天顺序见京都定位图</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=%E5%90%8D%E4%BB%A3%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4+%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97&amp;travelmode=transit" target="_blank" rel="noreferrer">在 Google Maps 打开</a></div>
-        <div class="day-body">
-          <div class="timeline">
-            <section class="stop"><span class="time">04:55</span><h3>酒店步行出发</h3><p>带便利店早餐和水。酒店到八坂塔约 40–45 分钟；清晨公交无法保证日出前抵达，因此直接步行。</p></section>
-            <section class="stop"><span class="time">05:40</span><h3>八坂塔 → 三年坂 → 二年坂</h3><div class="facts"><span class="chip free">街道全天</span><span class="chip free">免费</span><span class="chip">店铺尚未营业</span></div><p>保存传统町屋尺度的东山街巷，以法观寺五重塔构成京都经典景观；日出约 05:47–05:49。</p><details class="spot-detail"><summary>展开了解东山清晨线</summary><p>八坂塔正式名为法观寺五重塔，是东山天际线的重要标志。三年坂、二年坂属于产宁坂传统建筑物群保存地区，石板坡道两侧分布町屋、寺院入口和老铺。</p><p><b>拍摄顺序：</b>先在八坂通向东拍塔，再上三年坂，折回二年坂后接清水坂。清晨店铺未开，街道安静，但仍有居民与送货车辆；保持低声，不在门前架设妨碍通行的设备。</p></details></section>
-            <section class="stop"><span class="time">06:20</span><h3>清水寺</h3><div class="facts"><span class="chip">06:00–18:00</span><span class="chip fee">成人 ¥500</span><span class="chip cash">现金优先</span><span class="chip">现场票</span></div><p>以悬挑山坡的本堂舞台和京都市景著称；07:30 前离开，避开旅行团。</p><details class="spot-detail"><summary>展开了解清水寺</summary><p>寺院相传始于 778 年，名称来自音羽山清泉。现本堂主要为江户初期重建，舞台由复杂木构在陡坡上支撑，与周围山林共同列入世界文化遗产。</p><p><b>参观重点：</b>从仁王门、西门与三重塔进入，在本堂舞台看京都盆地，再顺路经过地主神社区域和音羽瀑布。瀑布三股水流有不同祈愿说法，选一股体验即可；上山走清水坂或茶碗坂。</p></details></section>
-            <section class="stop"><span class="time">07:45</span><h3>清水寺 → 金阁寺</h3><div class="transit">步行下山后按实时导航选“市巴士 + 地铁/市巴士”组合，预留 70–80 分钟。京都周六道路易堵，不承诺固定换乘班次。</div></section>
-            <section class="stop"><span class="time">09:00</span><h3>金阁寺</h3><div class="facts"><span class="chip">09:00–17:00</span><span class="chip fee">¥500</span><span class="chip">无需预约</span></div><p>金箔覆盖的舍利殿倒映镜湖池，是京都最具辨识度的景观之一；开门即入。</p><details class="spot-detail"><summary>展开了解金阁寺</summary><p>正式寺名为鹿苑寺，原为室町幕府将军足利义满的山庄。舍利殿三层分别呈现寝殿造、武家造与禅宗佛殿风格；现建筑在火灾后于 1955 年重建。</p><p><b>现场看点：</b>入口后第一处镜湖池正面视角最完整，继续单向绕行会看到背面、陆舟之松、白蛇塚与茶所。参观线不能逆行，晴天上午顺光较好，全程控制在 50 分钟。</p></details></section>
-            <section class="stop"><span class="time">10:10</span><h3>金阁寺道 → 银阁寺道</h3><div class="transit">市巴士 204 系统可直达方向，周六 10 时段官方时刻约 10:02 / 10:17 / 10:33 / 10:49；车程按 45–60 分钟预留。以站牌和实时到站为准。</div></section>
-            <section class="stop"><span class="time">11:10</span><h3>银阁寺</h3><div class="facts"><span class="chip">08:30–17:00</span><span class="chip fee">2026/4/1 起 ¥1,000</span><span class="chip">无需预约</span></div><p>素雅的东山文化代表，以观音殿、白砂庭园与苔庭见长，并未覆盖银箔。</p><details class="spot-detail"><summary>展开了解银阁寺</summary><p>正式寺名为慈照寺，由足利义政的山庄发展而来。观音殿被俗称“银阁”，并未覆盖银箔；其木色、书院文化、庭园和茶道美学共同体现东山文化。</p><p><b>现场看点：</b>先看银沙滩与向月台，再沿苔庭上坡到展望处俯瞰伽蓝和京都市区，最后回到观音殿水边。路线有短坡和台阶，参观约 45–55 分钟。</p></details></section>
-            <section class="stop"><span class="time">13:00</span><h3>哲学之道 → 永观堂</h3><div class="facts"><span class="chip free">步道免费</span><span class="chip">约 2 km</span><span class="chip">步行 45–60 分</span></div><p>沿琵琶湖疏水分线南行的约 2 公里步道，因哲学家西田几多郎常在此散步而得名。</p><details class="spot-detail"><summary>展开了解哲学之道</summary><p>这条水渠步道连接银阁寺、法然院周边、若王子神社与南禅寺区域。春樱最有名，初秋则更安静，适合观察住宅街、小桥和东山山脚的日常景观。</p><p><b>怎么走：</b>从银阁寺前沿水渠一直向南，不必每座小寺都进入。路面基本平缓，但连续步行会累；若到永观堂已晚于 14:20，就在若王子神社附近直接转向南禅寺。</p></details></section>
-            <section class="stop"><span class="time">14:05</span><h3>永观堂</h3><div class="facts"><span class="chip">受付 09:00–16:00</span><span class="chip">17:00 闭门</span><span class="chip fee">2026/4/1 起 ¥1,000</span><span class="chip cash">现金备用</span></div><p>以“回望阿弥陀”像与层叠伽蓝闻名，也是京都著名红叶寺院。</p><details class="spot-detail"><summary>展开了解永观堂</summary><p>正式名为禅林寺。阿弥陀如来像头部向左回望，形成独特的“みかえり阿弥陀”形象，相关传说强调佛陀回首等待落后的修行者。</p><p><b>现场看点：</b>建筑沿山势以回廊连接，御影堂、阿弥陀堂和庭池高低错落。9 月尚未到红叶高峰，优势是人少；普通参拜约 40–45 分钟，原文件所写“9 月 ¥600”已经过时。</p></details></section>
-            <section class="stop"><span class="time">15:00</span><h3>南禅寺</h3><div class="facts"><span class="chip">08:40–17:00</span><span class="chip">最晚受付 16:40</span><span class="chip fee">方丈 ¥600</span><span class="chip free">水路阁与境内免费</span></div><p>临济宗南禅寺派大本山，三门、方丈庭园与红砖水路阁形成古今交叠的景观。</p><details class="spot-detail"><summary>展开了解南禅寺</summary><p>南禅寺始于龟山法皇离宫改寺，在京都禅寺体系中地位很高。巨大三门象征寺院格局，方丈保存障壁画与枯山水庭园；水路阁则是明治时代琵琶湖疏水工程的一部分。</p><p><b>本次看法：</b>从三门外观、法堂走到水路阁，再购买方丈庭园一项即可。水路阁拱券下适合拍照，但不要长期占据通道；若时间不足，境内和水路阁免费区仍能看到核心特色。</p></details></section>
-            <section class="stop"><span class="time">16:25</span><h3>八坂神社 → 祇园 → 鸭川</h3><div class="transit">南禅寺一带步行/地铁至东山，再经八坂神社、花见小路、白川、四条大桥。</div><div class="facts"><span class="chip free">街区免费</span><span class="chip free">八坂神社外围全天</span></div><p>祇园保留花街与町屋景观，鸭川则是京都人日常休憩的城市河岸。</p><details class="spot-detail"><summary>展开了解祇园与鸭川</summary><p>八坂神社是祇园祭的信仰中心；向西可串联花见小路、祇园白川与四条大桥。祇园至今仍是传统艺能和茶屋活动区域，鸭川河岸则展现更日常的京都生活。</p><p><b>步行重点：</b>从八坂神社西楼门进入祇园，经过花见小路后转向白川，再到四条大桥看鸭川。不要追拍艺舞伎或进入私道；18:20 左右从四条大桥向西步行至寺町通。</p></details></section>
-            <section class="stop"><span class="time">18:40</span><h3>名代とんかつ かつくら · 四条寺町店</h3><div class="facts"><span class="chip">11:00–21:00</span><span class="chip">最后点餐 20:30</span><span class="chip">不接受预约</span><span class="chip fee">约 ¥2,000–3,000</span></div><p>京都创立的知名炸猪排店，从四条大桥步行约 7–10 分钟即到，最适合接在祇园与鸭川之后。主打炸里脊、腰内肉和季节组合套餐；周六可能排队，建议 18:40 左右抵达。</p><details class="spot-detail"><summary>展开了解餐厅与备选</summary><p>四条寺町店位于寺町通四条上ル，距离京都河原町站约 1 分钟、祇园四条站约 5 分钟。店内以京都町家般的低调入口和开放式厨房为特色；芝麻酱汁可自行研磨调配。</p><p><b>支付与备选：</b>餐厅平台目前列有 Mastercard、交通 IC 及部分 QR 支付，但官网没有完整支付清单，现场确认并备现金。若这里排队过长，可直接回京都站，在 Porta 地下街同品牌京都站店用餐，营业到 22:00、最后点餐 21:30。</p></details></section>
-            <section class="stop"><span class="time">20:00</span><h3>四条河原町 → 京都站酒店</h3><div class="transit">步行到四条河原町站，按实时导航乘京都市巴士到京都站；或阪急至乌丸后转地铁乌丸线。预留 30–40 分钟，京都站八条口再步行约 7 分钟回酒店。</div><p>这是当天终点。若餐厅排队使开餐晚于 19:45，优先改去京都站 Porta 分店，避免卡在 20:30 最后点餐。</p></section>
-          </div>
-          <aside class="side">
-            <div class="card"><h3>删减阀门</h3><ol><li>晚于 14:20：删永观堂内部</li><li>晚于 15:35：南禅寺仅看免费区</li><li>18:20 无论在哪都向四条寺町移动</li></ol></div>
-            <div class="card"><h3>京都交通票</h3><p class="small">地下铁·巴士一日券成人 ¥1,100，今天搭乘约 4–5 次可考虑。原文件提到的“巴士一日券 ¥700”已停售。</p></div>
-            <div class="card"><h3>面屋猪一备选</h3><p class="small">本店午券 10:30、晚券 16:00 起发；17:30 开晚市，无券不能进。若一定要吃，需要约 16:00 到店领券，并按指定时间返回，通常要删永观堂内部或缩短南禅寺、祇园；因此不作为本日主方案。</p></div>
-            <div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=%E5%85%AB%E5%9D%82%E5%A1%94&amp;travelmode=walking" target="_blank" rel="noreferrer">酒店 → 八坂塔</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E6%B8%85%E6%B0%B4%E5%AF%BA&amp;destination=%E9%87%91%E9%98%81%E5%AF%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">清水寺 → 金阁寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%87%91%E9%98%81%E5%AF%BA&amp;destination=%E9%93%B6%E9%98%81%E5%AF%BA&amp;travelmode=transit" target="_blank" rel="noreferrer">金阁寺 → 银阁寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%93%B6%E9%98%81%E5%AF%BA&amp;destination=%E5%8D%97%E7%A6%85%E5%AF%BA&amp;waypoints=%E5%93%B2%E5%AD%A6%E4%B9%8B%E9%81%93%7C%E6%B0%B8%E8%A7%82%E5%A0%82&amp;travelmode=walking" target="_blank" rel="noreferrer">银阁寺 → 哲学之道 → 南禅寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%8D%97%E7%A6%85%E5%AF%BA&amp;destination=%E5%90%8D%E4%BB%A3%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4+%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97&amp;waypoints=%E5%85%AB%E5%9D%82%E7%A5%9E%E7%A4%BE%7C%E7%A5%87%E5%9B%AD%7C%E5%9B%9B%E6%9D%A1%E5%A4%A7%E6%A1%A5&amp;travelmode=walking" target="_blank" rel="noreferrer">南禅寺 → 祇园 → かつくら</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%90%8D%E4%BB%A3%E3%81%A8%E3%82%93%E3%81%8B%E3%81%A4+%E3%81%8B%E3%81%A4%E3%81%8F%E3%82%89+%E5%9B%9B%E6%9D%A1%E5%AF%BA%E7%94%BA%E5%BA%97&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" target="_blank" rel="noreferrer">かつくら → 酒店</a></div></div>
-          </aside>
-        </div>
-      </article>
-
-      <article class="day" id="day5">
-        <header class="day-head"><div class="datebox"><span>SUN</span><b>27</b><span>SEP</span></div><div><h2>京都站八条口 → 关西机场</h2><p>已按 12:35 国际航班留出约 3 小时 45 分钟</p><div class="day-route"><span>起点：M’s Hotel Kyoto Station Kasuga</span><span>终点：KIX T1（返程日不再回酒店）</span></div></div><div class="day-metrics"><b>07:20 发车</b>08:48 到 T1</div></header>
-        <div class="map-preview"><iframe loading="lazy" title="9月27日 Google Maps 路线预览" src="https://maps.google.com/maps?saddr=Kyoto+Station+Hachijo+Exit&amp;daddr=Kansai+International+Airport+Terminal+1&amp;dirflg=r&amp;output=embed"></iframe><span class="map-caption">稳定预览：京都站八条口 → KIX T1｜实际乘已预约机场巴士</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kyoto+Station+Hachijo+Exit&amp;destination=Kansai+International+Airport+Terminal+1&amp;travelmode=transit" target="_blank" rel="noreferrer">在 Google Maps 打开</a></div>
-        <div class="day-body">
-          <div class="timeline">
-            <section class="stop"><span class="time">06:20</span><h3>起床、退房</h3><p>酒店步行至京都站八条口 KY2 站台约 7 分钟；06:55 前到站，确认航站楼。</p></section>
-            <section class="stop"><span class="time">07:20</span><h3>机场利木津巴士</h3><div class="facts"><span class="chip book">全便座位指定</span><span class="chip fee">¥2,800</span><span class="chip pay">预约可信用卡</span><span class="chip">行李放车底</span></div><p>官方 2026/3/29 起时刻：京都站八条口 07:20 → KIX T1 08:48 → T2 08:59。京都出发须预约，乘车日前一个月开放。</p></section>
-            <section class="stop"><span class="time">08:48</span><h3>KIX T1 办理值机</h3><p>先确认航空公司航站楼，再托运和安检。购物放在手续后剩余时间，不为了伴手礼拖延过关。</p></section>
-            <section class="stop"><span class="time">12:35</span><h3>起飞</h3><p>公交受路况影响，但此方案仍比起飞早 3 小时 47 分到 T1。若前夜收到道路异常/台风预警，备用方案改乘更早的 HARUKA，并以 JR 官方实时信息为准。</p></section>
-          </div>
-          <aside class="side">
-            <div class="card"><h3>更早备选</h3><p class="small">官方另有 07:05 班，08:33 到 T1；希望更稳可订此班。不要选原稿中的模糊“07:00 左右”。</p></div>
-            <div class="card"><h3>巴士支付</h3><p class="small">网上订票用信用卡；ICOCA 可付单程票，但同样需先预约座位。上车向司机购票时不可刷信用卡。</p></div>
-            <div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=%E4%BA%AC%E9%83%BD%E7%AB%99%E5%85%AB%E6%9D%A1%E5%8F%A3&amp;travelmode=walking" target="_blank" rel="noreferrer">酒店 → 八条口 KY2</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E9%83%BD%E7%AB%99%E5%85%AB%E6%9D%A1%E5%8F%A3&amp;destination=%E5%85%B3%E8%A5%BF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%E7%AC%AC%E4%B8%80%E8%88%AA%E7%AB%99%E6%A5%BC&amp;travelmode=transit" target="_blank" rel="noreferrer">京都站 → KIX T1</a></div></div>
-          </aside>
-        </div>
-      </article>
-
-      <section class="section print-break" id="money">
-        <div class="section-head"><h2>费用、ICOCA 与现金</h2><p>金额为每人估算，不含住宿、机票和大额购物</p></div>
-        <div class="grid grid-3">
-          <article class="card stat"><span class="small">交通与寄存</span><strong>约 ¥9,000–11,000</strong><span>含机场巴士、城际、地铁公交、两次寄存</span></article>
-          <article class="card stat"><span class="small">主要门票</span><strong>约 ¥5,550</strong><span>通天阁只看外观；含大阪城与本行程寺院</span></article>
-          <article class="card stat"><span class="small">餐饮</span><strong>约 ¥17,000–23,000</strong><span>含 MAIDO ¥5,000 与かつくら约 ¥2,000–3,000</span></article>
-        </div>
-        <div class="grid grid-2">
-          <article class="card"><h3>ICOCA ¥10,000：余额基本充足</h3><p>普通铁路、地铁和公交预计约消耗 <b>¥7,000–8,500</b>；机场巴士建议线上刷卡购票，不占 ICOCA。无需提前再充，余额低于 ¥1,500 时再用现金小额充值，并保留约 ¥1,000 应急。</p></article>
-          <article class="card"><h3>现金 ¥30,000：充足且有余量</h3><p>寺院、小摊、储物柜、鹿仙贝和临时 ICOCA 充值预计约用 <b>¥8,000–12,000</b>。MAIDO、かつくら、Donki 和大额购物优先刷卡，另留 ¥10,000 不动作为交通或刷卡失败的应急金。</p></article>
-        </div>
-        <div class="alert"><div class="mark">¥</div><div><strong>汇丰“红蓝狮子 Mastercard”先看卡面/香港汇丰 App 确认类型。</strong>若是 Mastercard 扣账卡，日元余额会优先直接扣；不足时自动折算港币，官方称海外消费不收外币交易费。若是 Red 信用卡，外币交易费通常为 1.95%。两者在日本 POS 都选择 <b>JPY 日元</b>，拒绝商户 DCC 港币换算。</div></div>
-        <div class="table-wrap">
-          <table><thead><tr><th>项目</th><th>参考金额</th><th>推荐支付</th><th>预约</th></tr></thead><tbody>
-            <tr><td>大阪城天守阁</td><td>¥1,200</td><td>Mastercard / ICOCA / 支付宝微信</td><td>现场或电子票</td></tr>
-            <tr><td>新世界 + 通天阁外观</td><td>¥0</td><td>—</td><td>无需预约</td></tr>
-            <tr><td>东大寺 + 若草山</td><td>¥950</td><td>现金</td><td>现场</td></tr>
-            <tr><td>平等院</td><td>¥700</td><td>卡 / 电子支付；备现金</td><td>现场</td></tr>
-            <tr><td>清水寺 + 金阁寺 + 银阁寺</td><td>¥2,000</td><td>现金最稳</td><td>现场</td></tr>
-            <tr><td>永观堂 + 南禅寺方丈</td><td>¥1,600</td><td>现金最稳</td><td>现场</td></tr>
-            <tr><td>MAIDO 黑毛和牛放题 + 软饮</td><td>官网当前 ¥5,000</td><td>Mastercard；备现金</td><td>建议提前订位</td></tr>
-            <tr><td>かつくら四条寺町店</td><td>约 ¥2,000–3,000</td><td>Mastercard / IC；备现金</td><td>不接受预约，现场排队</td></tr>
-            <tr><td>机场巴士</td><td>¥2,800</td><td>线上信用卡 / ICOCA</td><td>必须预留指定座</td></tr>
-          </tbody></table>
-        </div>
-      </section>
-
-      <section class="section" id="gifts">
-        <div class="section-head"><h2>伴手礼购买节奏</h2><p>按保存条件排序；价格以店头当日为准</p></div>
-        <div class="grid grid-3">
-          <article class="card gift"><h3>薪パイ 8 根</h3><div class="price">¥980</div><p class="where">りくろーおじさん难波本店｜9/24 10:45</p><p>常温、比芝士蛋糕更适合带走。黄油曲奇 8 枚 ¥830 也合适。</p></article>
-          <article class="card gift"><h3>抹茶夹心饼“叶ごろも”</h3><div class="price">10 枚 ¥1,490</div><p class="where">伊藤久右卫门宇治本店｜9/25 15:00</p><p>送礼体面。官网当前标为冷藏配送商品，旅途携带先向店员确认保存要求。</p></article>
-          <article class="card gift"><h3>宇治茶 / 玉露 / 煎茶</h3><div class="price">约 ¥1,000–3,000</div><p class="where">伊藤久右卫门宇治本店｜9/25</p><p>常温稳定、重量轻，是最稳妥的宇治伴手礼。</p></article>
-          <article class="card gift"><h3>八桥 / 生八桥</h3><div class="price">约 ¥650–2,000</div><p class="where">京都站或清水寺周边｜9/26–27</p><p>生八桥保质期短，最后一天买；硬八桥更适合长途。</p></article>
-          <article class="card gift"><h3>柿叶寿司</h3><div class="price">约 ¥1,000–2,000</div><p class="where">柿叶寿司本舗たなか奈良本店｜9/25 午餐</p><p>适合当天吃或短期携带，按包装保存说明执行。</p></article>
-          <article class="card gift"><h3>药妆与常温零食</h3><div class="price">按需</div><p class="where">Don Quijote 道顿堀店｜9/24 晚</p><p>同店同日集中结账，携护照办免税；现场规则优先。</p></article>
-        </div>
-      </section>
-
-      <section class="section" id="sources">
-        <div class="section-head"><h2>核对记录与官方来源</h2><p>重点信息在 2026-09-20 核对；本次餐厅调整于 2026-09-22 复核</p></div>
-        <div class="card">
-          <ul class="source-list">
-            <li><a href="https://www.osakacastle.net/guide/" target="_blank" rel="noreferrer">大阪城天守阁：时间、¥1,200、支付方式</a></li>
-            <li><a href="https://maidowagyuyakiniku.com/shopinfo/" target="_blank" rel="noreferrer">MAIDO：地址、营业时间、交通与信用卡</a></li>
-            <li><a href="https://maidowagyuyakiniku.com/menu/" target="_blank" rel="noreferrer">MAIDO：黑毛和牛放题套餐与官网价格</a></li>
-            <li><a href="https://www.shitennoji.or.jp/admission.html" target="_blank" rel="noreferrer">四天王寺：彼岸会开放与中心伽蓝免费</a></li>
-            <li><a href="https://www.todaiji.or.jp/information/haikan/" target="_blank" rel="noreferrer">东大寺：07:30–17:30、¥800、仅现金</a></li>
-            <li><a href="https://www.byodoin.or.jp/guide/" target="_blank" rel="noreferrer">平等院：营业、¥700</a></li>
-            <li><a href="https://www.byodoin.or.jp/news/" target="_blank" rel="noreferrer">平等院：2026 夏季凤凰堂内部参拜变更</a></li>
-            <li><a href="https://www.itohkyuemon.co.jp/corporate/shop/uji/" target="_blank" rel="noreferrer">伊藤久右卫门：营业与支付</a></li>
-            <li><a href="https://www.kiyomizudera.or.jp/en/location/" target="_blank" rel="noreferrer">清水寺：2026 开放时间</a></li>
-            <li><a href="https://www.shokoku-ji.jp/kinkakuji/" target="_blank" rel="noreferrer">金阁寺：开放信息</a></li>
-            <li><a href="https://www.shokoku-ji.jp/ginkakuji/" target="_blank" rel="noreferrer">银阁寺：08:30–17:00</a></li>
-            <li><a href="https://www.shokoku-ji.jp/ginkakuji/news/%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91%E3%80%80%E5%8F%82%E6%8B%9D%E5%BF%97%E7%B4%8D%E6%96%99%E6%94%B9%E5%AE%9A%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B2026%E5%B9%B44%E6%9C%881%E6%97%A5%E3%82%88/" target="_blank" rel="noreferrer">银阁寺：2026/4/1 涨至 ¥1,000</a></li>
-            <li><a href="https://www.eikando.or.jp/English/haikan_e.html" target="_blank" rel="noreferrer">永观堂：普通参拜 ¥1,000、受付时间</a></li>
-            <li><a href="https://www.nanzenji.or.jp/about_rinzaishu/visit" target="_blank" rel="noreferrer">南禅寺：时间与各区域票价</a></li>
-            <li><a href="https://www.katsukura.jp/shops/sijoteramachi/" target="_blank" rel="noreferrer">かつくら四条寺町店：地址、营业时间与不接受预约</a></li>
-            <li><a href="https://menyainoichi.net/news/663335b9c7a87201ab8228cf" target="_blank" rel="noreferrer">面屋猪一：不预约、当日整理券规则</a></li>
-            <li><a href="https://www.kate.co.jp/timetable/detail/KY" target="_blank" rel="noreferrer">京都机场巴士：班次、¥2,800、全便预约</a></li>
-            <li><a href="https://www.keihanbus.jp/limousine/kix/limousine_kanku_kyoto.html" target="_blank" rel="noreferrer">京阪巴士：购票与 ICOCA 说明</a></li>
-            <li><a href="https://www.hotel-livemax.com/osaka/honmachi/" target="_blank" rel="noreferrer">大阪酒店：入住与支付</a></li>
-            <li><a href="https://kyohotel.jp/en/hotel/mshotel-kasuga-en/" target="_blank" rel="noreferrer">京都酒店：入住、地址与卡种</a></li>
-            <li><a href="https://www.hsbc.com.hk/help/faq/debit-cards/" target="_blank" rel="noreferrer">汇丰香港 Mastercard 扣账卡：外币扣款规则</a></li>
-            <li><a href="https://www.hsbc.com.hk/content/dam/hsbc/hk/docs/credit-cards/red/ewelcome-pack.pdf" target="_blank" rel="noreferrer">汇丰 Red 信用卡：外币交易费</a></li>
-          </ul>
-        </div>
-        <div class="alert"><div class="mark">i</div><div><strong>仍需临行复查的内容</strong>天气、台风、铁路临时停运、餐厅临时休业、储物柜余量无法提前锁定。建议出发前查看 MAIDO 预约确认、かつくら/面屋猪一临时公告、机场巴士订单及日本天气预警。</div></div>
-      </section>
-    </main>
-    <dialog class="map-dialog" id="map-dialog" aria-labelledby="map-dialog-title">
-      <div class="map-dialog-head"><h3 id="map-dialog-title">行程定位图</h3><button type="button" data-map-close aria-label="关闭地图">×</button></div>
-      <div class="map-dialog-body" id="map-dialog-body"></div>
-      <p class="map-note">可横向滚动查看完整大图。序号对应行程顺序，H 代表酒店；地图为方位示意，实时交通请使用各地图旁的 Google Maps 链接。</p>
-    </dialog>
-    <footer>中秋关西 5 日 · 优化核对版｜2026.09.23–09.27｜页面内目录均为锚点，不含本机 file:/// 绝对链接。<br>个人散客信息按公开资料整理；现场公告、预约确认邮件与票面时间具有最高优先级。</footer>
-  </div>
-  <script>
+<button class="print" onclick="window.print()" type="button">打印 / 保存 PDF</button>
+<div class="shell">
+<header class="hero" id="top">
+<div class="kicker">Kansai · 2026 Autumn</div>
+<h1>中秋关西 5 日<br/>四城顺路攻略</h1>
+<p>大阪 · 奈良 · 宇治 · 京都｜第一次赴日｜公共交通｜日均 1–3 万步</p>
+<div class="hero-meta"><span>9.23—9.27</span><span>KIX 进出</span><span>ICOCA ¥10,000</span><span>现金 ¥30,000</span><span>唯一早起：9.26</span></div>
+<div class="verified">资料核对：2026-09-22<br/>临时停运与天气以出发当日为准</div>
+</header>
+<nav aria-label="页面目录" class="nav">
+<a href="#overview">总览</a><a href="#city-maps">四城地图</a><a href="#booking">预约清单</a><a href="#day1">9.23 大阪</a><a href="#day2">9.24 大阪</a><a href="#day3">9.25 奈良·宇治</a><a href="#day4">9.26 京都</a><a href="#day5">9.27 返程</a><a href="#money">费用支付</a><a href="#gifts">伴手礼</a><a href="#sources">核对来源</a>
+</nav>
+<main>
+<section class="section" id="overview">
+<div class="section-head"><h2>先看全局</h2><p>确认路线优先；岚山、三千院、贵船已主动舍弃</p></div>
+<div class="grid grid-4">
+<article class="card stat"><span class="small">去程</span><strong>9/23 11:04</strong><span>KIX 落地</span></article>
+<article class="card stat"><span class="small">回程</span><strong>9/27 12:35</strong><span>KIX 起飞</span></article>
+<article class="card stat"><span class="small">住宿 · 大阪</span><strong>2 晚</strong><span>HOTEL LiVEMAX 大阪本町</span></article>
+<article class="card stat"><span class="small">住宿 · 京都</span><strong>2 晚</strong><span>M’s Hotel Kyoto Station Kasuga</span></article>
+</div>
+<div class="alert danger"><div class="mark">!</div><div><strong>9/26 新安排：猪一午餐 + 三嶋亭寿喜烧。</strong>10:20 前到猪一本店，10:30 发午餐券；若 12:00 后才吃完，就跳过金阁寺走东山路线。永观堂 16:00 停止受付，南禅寺收费区 16:40 停止受付；约 18:00 到三嶋亭高岛屋店现场排队，20:00 最晚入店。</div></div>
+<div class="alert ok"><div class="mark">↗</div><div><strong>四城定位图负责展示完整游览顺序，Google Maps 负责实时导航。</strong>每天的在线预览只显示一个稳定的起终点区间，避免公共交通多经停路线被 Google 错误缩放成世界地图；右侧“逐段导航”可打开每个区间并读取当时班次。打印版保留文字交通，不打印在线地图。</div></div>
+<div aria-label="五日路线概览" class="route-strip">
+<div class="route-day"><span class="date">DAY 1 · 9/23</span><h3>大阪北线</h3><p>KIX → 大阪城 → 中之岛 → 梅田</p><span class="steps">15k–18k 步</span></div>
+<div class="route-day"><span class="date">DAY 2 · 9/24</span><h3>大阪南线</h3><p>黑门 → 难波八阪 → 四天王寺 → 新世界 → MAIDO 和牛放题</p><span class="steps">19k–23k 步</span></div>
+<div class="route-day"><span class="date">DAY 3 · 9/25</span><h3>三城转场</h3><p>奈良 → 宇治 → 京都入住 → 伏见稻荷</p><span class="steps">22k–27k 步</span></div>
+<div class="route-day"><span class="date">DAY 4 · 9/26</span><h3>京都纵贯</h3><p>东山清晨 → 猪一 → 金阁寺（按进度）→ 银阁寺 → 南禅寺 → 三嶋亭</p><span class="steps">26k–30k 步</span></div>
+<div class="route-day"><span class="date">DAY 5 · 9/27</span><h3>返程</h3><p>京都站八条口 → KIX T1</p><span class="steps">低步数</span></div>
+</div>
+</section>
+<section class="section" id="city-maps">
+<div class="section-head"><h2>四城行程定位图</h2><p>序号就是当天游览顺序；点击地图可放大</p></div>
+<div class="city-maps">
+<article class="card city-map-card">
+<header><div><h3>大阪</h3><span>9/23 北线 · 9/24 南线</span></div><span>北 ↑</span></header>
+<svg aria-label="大阪主要景点和游览顺序示意图" class="map-canvas" role="img" viewbox="0 0 520 360">
+<rect class="land" height="360" width="520"></rect><path class="district" d="M35 30H485V330H35Z"></path><path class="water" d="M20 125 C120 108 215 145 325 119 S455 113 510 92"></path><path class="water" d="M20 153 C130 137 222 171 330 148 S450 142 510 126"></path><path class="rail" d="M244 25V340M120 280H480M65 210H455"></path><path class="route-a" d="M258 195 L342 142 L260 126 L260 65 L258 195"></path><path class="route-b" d="M258 195 L315 232 L196 246 L330 284 L290 309 L238 262 L258 195"></path>
+<text class="minor" x="372" y="54">大阪站／梅田</text><text class="minor" x="354" y="110">大阪城</text><text class="minor" x="66" y="125">堂岛川</text><text class="minor" x="72" y="161">土佐堀川</text><text class="minor" x="342" y="339">天王寺方向</text><text class="compass" x="474" y="31">N ↑</text>
+<g class="pin"><circle class="pin-h" cx="258" cy="195" r="13"></circle><text x="258" y="195">H</text></g><text class="label" x="274" y="191">大阪本町酒店</text>
+<g class="pin"><circle class="pin-a" cx="342" cy="142" r="13"></circle><text x="342" y="142">1</text></g><text class="label" x="359" y="146">大阪城</text>
+<g class="pin"><circle class="pin-a" cx="260" cy="126" r="13"></circle><text x="260" y="126">2</text></g><text class="label" x="199" y="108">中之岛</text>
+<g class="pin"><circle class="pin-a" cx="260" cy="65" r="13"></circle><text x="260" y="65">3</text></g><text class="label" x="278" y="69">梅田</text>
+<g class="pin"><circle class="pin-b" cx="315" cy="232" r="13"></circle><text x="315" y="232">1</text></g><text class="label" x="332" y="226">黑门市场</text>
+<g class="pin"><circle class="pin-b" cx="196" cy="246" r="13"></circle><text x="196" y="246">2</text></g><text class="label" x="82" y="244">难波八阪</text>
+<g class="pin"><circle class="pin-b" cx="330" cy="284" r="13"></circle><text x="330" y="284">3</text></g><text class="label" x="348" y="280">四天王寺</text>
+<g class="pin"><circle class="pin-b" cx="290" cy="309" r="13"></circle><text x="290" y="309">4</text></g><text class="label" x="306" y="321">新世界／通天阁外观</text>
+<g class="pin"><circle class="pin-b" cx="238" cy="262" r="13"></circle><text x="238" y="262">5</text></g><text class="label" x="72" y="280">心斋桥／MAIDO／道顿堀</text>
+</svg>
+<div class="map-legend"><span><i style="background:var(--jade)"></i>9/23</span><span><i style="background:var(--rust)"></i>9/24</span><span><i style="background:var(--gold)"></i>酒店</span></div>
+<div class="map-actions"><button data-map-open="大阪行程定位图" type="button">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;waypoints=%E9%BB%91%E9%97%A8%E5%B8%82%E5%9C%BA%7C%E9%9A%BE%E6%B3%A2%E5%85%AB%E9%98%AA%E7%A5%9E%E7%A4%BE%7C%E5%9B%9B%E5%A4%A9%E7%8E%8B%E5%AF%BA%7C%E9%80%9A%E5%A4%A9%E9%98%81%7C%E5%BF%83%E6%96%8B%E6%A1%A5%7CMAIDO%E5%92%8C%E7%89%9B%E7%83%A7%E8%82%89%7CDon+Quijote+%E9%81%93%E9%A1%BF%E5%A0%80%E5%BA%97&amp;travelmode=transit" rel="noreferrer" target="_blank">Google Maps</a></div>
+</article>
+<article class="card city-map-card">
+<header><div><h3>奈良</h3><span>9/25 上午 · 西向东步行</span></div><span>北 ↑</span></header>
+<svg aria-label="奈良主要景点和游览顺序示意图" class="map-canvas" role="img" viewbox="0 0 520 360">
+<rect class="land" height="360" width="520"></rect><path class="district" d="M35 35H485V325H35Z"></path><path d="M270 45 C390 60 458 116 475 300 L305 315 C325 234 320 158 270 45Z" fill="#dce8d6"></path><path class="rail" d="M84 50V322M165 35V325"></path><path class="route-a" d="M166 185 L250 175 L337 148 L415 205 L337 148 L250 175 L165 270"></path><text class="minor" x="360" y="88">奈良公园绿地区域</text><text class="minor" x="52" y="82">JR 线</text><text class="minor" x="172" y="82">近铁线</text><text class="compass" x="474" y="31">N ↑</text>
+<g class="pin"><circle class="pin-a" cx="166" cy="185" r="13"></circle><text x="166" y="185">1</text></g><text class="label" x="92" y="166">近铁奈良站</text>
+<g class="pin"><circle class="pin-a" cx="250" cy="175" r="13"></circle><text x="250" y="175">2</text></g><text class="label" x="232" y="145">奈良公园</text>
+<g class="pin"><circle class="pin-a" cx="337" cy="148" r="13"></circle><text x="337" y="148">3</text></g><text class="label" x="350" y="145">东大寺</text>
+<g class="pin"><circle class="pin-a" cx="415" cy="205" r="13"></circle><text x="415" y="205">4</text></g><text class="label" x="365" y="235">若草山一重目</text>
+<g class="pin"><circle class="pin-a" cx="165" cy="270" r="13"></circle><text x="165" y="270">5</text></g><text class="label" x="89" y="294">取行李后到 JR 奈良站</text>
+</svg>
+<div class="map-legend"><span><i style="background:var(--jade)"></i>9/25 上午顺序</span><span>右侧绿色为奈良公园与山麓</span></div>
+<div class="map-actions"><button data-map-open="奈良行程定位图" type="button">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E8%BF%91%E9%93%81%E5%A5%88%E8%89%AF%E7%AB%99&amp;destination=JR%E5%A5%88%E8%89%AF%E7%AB%99&amp;waypoints=%E5%A5%88%E8%89%AF%E5%85%AC%E5%9B%AD%7C%E4%B8%9C%E5%A4%A7%E5%AF%BA%7C%E8%8B%A5%E8%8D%89%E5%B1%B1&amp;travelmode=walking" rel="noreferrer" target="_blank">Google Maps</a></div>
+</article>
+<article class="card city-map-card">
+<header><div><h3>宇治</h3><span>9/25 下午 · 河东到河西</span></div><span>北 ↑</span></header>
+<svg aria-label="宇治主要景点和游览顺序示意图" class="map-canvas" role="img" viewbox="0 0 520 360">
+<rect class="land" height="360" width="520"></rect><path class="district" d="M35 35H485V325H35Z"></path><path class="water" d="M40 76 C185 118 220 203 480 282"></path><path class="rail" d="M98 30V330M430 35L370 325"></path><path class="route-a" d="M116 218 L215 178 L326 126 L375 96 L336 166 L265 220 L116 218"></path><text class="minor" x="180" y="98">宇治川</text><text class="minor" x="69" y="312">JR 奈良线</text><text class="minor" x="389" y="312">京阪宇治线</text><text class="compass" x="474" y="31">N ↑</text>
+<g class="pin"><circle class="pin-a" cx="116" cy="218" r="13"></circle><text style="font-size:9px" x="116" y="218">1/7</text></g><text class="label" x="58" y="246">JR 宇治站</text>
+<g class="pin"><circle class="pin-a" cx="215" cy="178" r="13"></circle><text x="215" y="178">2</text></g><text class="label" x="159" y="154">宇治桥</text>
+<g class="pin"><circle class="pin-a" cx="326" cy="126" r="13"></circle><text x="326" y="126">3</text></g><text class="label" x="338" y="111">宇治神社</text>
+<g class="pin"><circle class="pin-a" cx="375" cy="96" r="13"></circle><text x="375" y="96">4</text></g><text class="label" x="390" y="79">宇治上神社</text>
+<g class="pin"><circle class="pin-a" cx="336" cy="166" r="13"></circle><text x="336" y="166">5</text></g><text class="label" x="350" y="184">伊藤久右卫门</text>
+<g class="pin"><circle class="pin-a" cx="265" cy="220" r="13"></circle><text x="265" y="220">6</text></g><text class="label" x="280" y="238">平等院</text>
+</svg>
+<div class="map-legend"><span><i style="background:var(--jade)"></i>9/25 下午顺序</span><span>1 与 7 均为 JR 宇治站</span></div>
+<div class="map-actions"><button data-map-open="宇治行程定位图" type="button">点击查看大图</button><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;destination=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;waypoints=%E5%AE%87%E6%B2%BB%E6%A1%A5%7C%E5%AE%87%E6%B2%BB%E7%A5%9E%E7%A4%BE%7C%E5%AE%87%E6%B2%BB%E4%B8%8A%E7%A5%9E%E7%A4%BE%7C%E4%BC%8A%E8%97%A4%E4%B9%85%E5%8F%B3%E5%8D%AB%E9%97%A8%E5%AE%87%E6%B2%BB%E6%9C%AC%E5%BA%97%7C%E5%B9%B3%E7%AD%89%E9%99%A2&amp;travelmode=walking" rel="noreferrer" target="_blank">Google Maps</a></div>
+</article>
+<article class="card city-map-card">
+<header><div><h3>京都</h3><span>9/25 夜访 · 9/26 东山与北部</span></div><span>北 ↑</span></header>
+<svg aria-label="京都主要景点方位示意图，编号仅用于定位，实际顺序见9月26日时间轴" class="map-canvas" role="img" viewbox="0 0 520 360">
+<rect class="land" height="360" width="520"></rect><path class="district" d="M35 30H485V330H35Z"></path><path d="M365 30 C420 95 442 205 468 330H520V0H388Z" fill="#dce8d6"></path><path class="water" d="M315 25 C305 96 312 188 330 335"></path><path class="rail" d="M35 268H486M230 25V334"></path><path class="route-b" d="M250 281 L285 330 L250 281"></path><text class="minor" x="334" y="58">东山</text><text class="minor" x="286" y="173">鸭川</text><text class="minor" x="181" y="262">京都站</text><text class="minor" x="68" y="54">西北</text><text class="compass" x="474" y="31">N ↑</text>
+<g class="pin"><circle class="pin-h" cx="250" cy="281" r="13"></circle><text x="250" y="281">H</text></g><text class="label" x="137" y="306">京都站酒店</text>
+<g class="pin"><circle class="pin-b" cx="285" cy="330" r="13"></circle><text x="285" y="330">1</text></g><text class="label" x="300" y="325">伏见稻荷</text>
+<g class="pin"><circle class="pin-a" cx="356" cy="235" r="13"></circle><text x="356" y="235">1</text></g><text class="label" x="372" y="252">八坂塔／二三年坂</text>
+<g class="pin"><circle class="pin-a" cx="380" cy="215" r="13"></circle><text x="380" y="215">2</text></g><text class="label" x="396" y="211">清水寺</text>
+<g class="pin"><circle class="pin-a" cx="130" cy="76" r="13"></circle><text x="130" y="76">3</text></g><text class="label" x="145" y="71">金阁寺</text>
+<g class="pin"><circle class="pin-a" cx="400" cy="92" r="13"></circle><text x="400" y="92">4</text></g><text class="label" x="414" y="88">银阁寺</text>
+<g class="pin"><circle class="pin-a" cx="386" cy="142" r="13"></circle><text x="386" y="142">5</text></g><text class="label" x="399" y="143">哲学之道</text>
+<g class="pin"><circle class="pin-a" cx="371" cy="170" r="13"></circle><text x="371" y="170">6</text></g><text class="label" x="385" y="173">永观堂</text>
+<g class="pin"><circle class="pin-a" cx="359" cy="191" r="13"></circle><text x="359" y="191">7</text></g><text class="label" x="373" y="194">南禅寺</text>
+<g class="pin"><circle class="pin-a" cx="340" cy="221" r="13"></circle><text x="340" y="221">8</text></g><text class="label" x="266" y="209">祇园</text>
+<g class="pin"><circle class="pin-a" cx="305" cy="230" r="13"></circle><text x="305" y="230">9</text></g><text class="label" x="208" y="242">河原町／三嶋亭</text>
+</svg>
+<div class="map-legend"><span><i style="background:var(--rust)"></i>9/25 夜访</span><span>绿色编号为地理定位，非游览顺序</span><span><i style="background:var(--gold)"></i>酒店</span></div>
+<div class="map-actions"><button data-map-open="京都行程定位图" type="button">点击查看大图</button><a href="#day4" rel="noreferrer">查看更新后行程</a></div>
+</article>
+</div>
+<p class="map-note">定位图按真实方位关系简化绘制，便于快速判断景点集中区域和游览先后；距离、换乘与临时封路仍以每张图下方的 Google Maps 及当天站牌为准。</p>
+</section>
+<section class="section" id="booking">
+<div class="section-head"><h2>现在要办的 2 件事</h2><p>勾选状态会保存在本机浏览器</p></div>
+<div class="todo">
+<label><input data-save="maido" type="checkbox"/><span><b>MAIDO 和牛焼肉 9/24 17:30</b><br/><small>道顿堀店，建议提前订位。官网当前黑毛和牛放题含软饮 ¥5,000；预约页面若显示不同套餐或价格，以订单确认页为准。</small></span><a href="https://maidowagyuyakiniku.com/menu/" rel="noreferrer" target="_blank">官网</a></label>
+<label><input data-save="bus" type="checkbox"/><span><b>京都站 → KIX 9/27 07:20 班</b><br/><small>全便指定席；乘车前一个月开放预约。¥2,800，8:48 到 T1。</small></span><a href="https://www.kate.co.jp/timetable/detail/KY" rel="noreferrer" target="_blank">时刻表</a></label>
+</div>
+<div class="alert ok"><div class="mark">✓</div><div><strong>现场处理即可</strong>寺院现场购票；三嶋亭京都高岛屋店不接受座位预约，直接排队。猪一本店午餐整理券 10:30 起发，晚券 16:00 起发；本次安排午餐，按券上时间全员返回。</div></div>
+</section>
+<article class="day" id="day1">
+<header class="day-head"><div class="datebox"><span>WED</span><b>23</b><span>SEP</span></div><div><h2>抵达大阪 · 大阪城、中之岛、梅田</h2><p>秋分日｜落地后的轻强度城市线</p><div class="day-route"><span>起点：KIX T1</span><span>市内起点：HOTEL LiVEMAX 大阪本町</span><span>终点：HOTEL LiVEMAX 大阪本町</span></div></div><div class="day-metrics"><b>15k–18k 步</b>夜宿大阪本町</div></header>
+<div class="map-preview"><iframe loading="lazy" src="https://maps.google.com/maps?saddr=Kansai+International+Airport&amp;daddr=HOTEL+LiVEMAX+Osaka+Honmachi&amp;dirflg=r&amp;output=embed" title="9月23日 Google Maps 路线预览"></iframe><span class="map-caption">稳定预览：KIX → 大阪本町酒店｜市内顺序见四城地图</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kansai+International+Airport&amp;destination=HOTEL+LiVEMAX+Osaka+Honmachi&amp;travelmode=transit" rel="noreferrer" target="_blank">在 Google Maps 打开</a></div>
+<div class="day-body">
+<div class="timeline">
+<section class="stop"><span class="time">11:04</span><h3>KIX T1 落地</h3><p>第一次入境按 75–95 分钟预留。提前完成 Visit Japan Web，拿到行李后直接上 2F 铁路层。</p></section>
+<section class="stop"><span class="time">12:40</span><h3>南海空港急行 → 难波 → 本町</h3><div class="transit">关西机场 → 南海难波约 45 分 / ¥970；换 Osaka Metro 御堂筋线至本町，1 区 ¥190。均可刷 ICOCA，不需预约。</div><p>若错过计划班次，空港急行白天班次密，直接坐下一班；不必为 Rapi:t 等座。</p></section>
+<section class="stop"><span class="time">14:00</span><h3>酒店寄存 / 入住</h3><div class="facts"><span class="chip">入住 15:00</span><span class="chip">最晚 22:30</span><span class="chip pay">Mastercard / IC / 支付宝微信</span></div><p>HOTEL LiVEMAX 大阪本町，久太郎町 3-1-13。早到先寄存。</p></section>
+<section class="stop"><span class="time">14:40</span><h3>大阪城公园 → 天守阁</h3><div class="transit">本町 → 森ノ宮（中央线），从公园东南侧进入；天守阁后往西侧离开。</div><div class="facts"><span class="chip">09:00–18:00</span><span class="chip fee">成人 ¥1,200</span><span class="chip pay">卡 / ICOCA / 支付宝 / 微信</span><span class="chip">最晚 17:30</span></div><p>丰臣秀吉时代大阪权力中心的现代复原天守，馆内以大阪城与战国史展览为主，顶层可看城市全景。公园免费；延误超过 90 分钟时只看外观。</p><details class="spot-detail"><summary>展开了解大阪城</summary><p>现天守于 1931 年重建，内部是博物馆，并非保存至今的原始城楼。重点可看丰臣秀吉、大坂冬之阵与夏之阵的展陈；城墙、护城河和巨石也很值得留意。个人不需预约时段，电子票可减少排队。</p><p><b>现场看点：</b>从森之宫进入会先经过宽阔公园，再逐渐看到石垣与内护城河。馆内可先上高层确认城市方位，再从上往下看展；若排队很长，外部樱门、蛸石和水面城景同样值得停留。</p></details></section>
+<section class="stop"><span class="time">17:00</span><h3>中之岛河畔散步</h3><div class="transit">大阪城西侧 → 天满桥；沿河向中央公会堂、中之岛公园走，再到淀屋桥。</div><div class="facts"><span class="chip free">免费</span><span class="chip">户外全天</span></div><p>堂岛川与土佐堀川之间的城市岛洲，适合看水岸、玫瑰园和红砖中央公会堂外观。</p><details class="spot-detail"><summary>展开了解中之岛</summary><p>中之岛集中了大阪的行政、文化和近代建筑。中央公会堂是 1918 年落成的地标；本行程只安排户外散步，能控制时间，也能在傍晚欣赏河岸灯光。</p><p><b>现场看点：</b>中央公会堂红砖外观、大阪府立中之岛图书馆古典立面和玫瑰园位于同一河岛轴线上。沿南岸往淀屋桥走，能同时看到桥梁、办公楼灯光和水面倒影。</p></details></section>
+<section class="stop"><span class="time">18:30</span><h3>梅田晚餐与大阪站商圈</h3><div class="transit">淀屋桥 → 梅田（御堂筋线 ¥190）。</div><p>逛大阪站、LUCUA、Grand Front。晚餐可选大阪烧ゆかり曽根崎本店，预算 ¥2,000–3,000；不强制排梅田蓝天大厦。</p></section>
+<section class="stop"><span class="time">21:30</span><h3>梅田 → 大阪本町酒店</h3><div class="transit">Osaka Metro 御堂筋线：梅田 → 本町，约 5 分 / ¥190；本町站 12 号口步行约 2 分钟回酒店。</div><p>这是当天明确的终点。建议 22:00 前回房，完全不需要卡地铁末班。</p></section>
+</div>
+<aside class="side">
+<div class="card"><h3>延误删减顺序</h3><ol><li>先删中之岛</li><li>16:45 后不再买大阪城票</li><li>直接去梅田吃饭</li></ol></div>
+<div class="card"><h3>支付提示</h3><p class="small">大阪城的官方收款方式最完整。小店仍不要默认支持支付宝/微信。</p></div>
+<div class="card"><h3>末班安全</h3><p class="small">本日建议 21:30–22:00 回酒店，远早于地铁末班；无需靠末班时间规划。</p></div>
+<div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%85%B3%E8%A5%BF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;travelmode=transit" rel="noreferrer" target="_blank">KIX → 大阪酒店</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%A4%A9%E5%AE%88%E9%98%81&amp;travelmode=transit" rel="noreferrer" target="_blank">酒店 → 大阪城</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%A4%A7%E9%98%AA%E5%9F%8E%E5%A4%A9%E5%AE%88%E9%98%81&amp;destination=%E4%B8%AD%E4%B9%8B%E5%B2%9B%E5%85%AC%E5%9B%AD&amp;travelmode=walking" rel="noreferrer" target="_blank">大阪城 → 中之岛</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%B8%AD%E4%B9%8B%E5%B2%9B%E5%85%AC%E5%9B%AD&amp;destination=%E5%A4%A7%E9%98%AA%E7%AB%99&amp;travelmode=transit" rel="noreferrer" target="_blank">中之岛 → 梅田</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%A4%A7%E9%98%AA%E7%AB%99&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;travelmode=transit" rel="noreferrer" target="_blank">梅田 → 酒店</a></div></div>
+</aside>
+</div>
+</article>
+<article class="day" id="day2">
+<header class="day-head"><div class="datebox"><span>THU</span><b>24</b><span>SEP</span></div><div><h2>大阪南线 · 市场、新世界与和牛放题</h2><p>通天阁只看外观，把时间与胃口留给 MAIDO</p><div class="day-route"><span>起点：HOTEL LiVEMAX 大阪本町</span><span>终点：HOTEL LiVEMAX 大阪本町</span></div></div><div class="day-metrics"><b>19k–23k 步</b>夜宿大阪本町</div></header>
+<div class="map-preview"><iframe loading="lazy" src="https://maps.google.com/maps?saddr=HOTEL+LiVEMAX+Osaka+Honmachi&amp;daddr=Don+Quijote+Dotonbori&amp;dirflg=r&amp;output=embed" title="9月24日 Google Maps 路线预览"></iframe><span class="map-caption">稳定预览：大阪酒店 → 道顿堀｜中间景点按逐段导航</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+Osaka+Honmachi&amp;destination=Don+Quijote+Dotonbori&amp;travelmode=transit" rel="noreferrer" target="_blank">在 Google Maps 打开</a></div>
+<div class="day-body">
+<div class="timeline">
+<section class="stop"><span class="time">08:00</span><h3>大阪本町酒店出发</h3><div class="transit">本町 → なんば（御堂筋线，约 4 分 / ¥190），再步行约 8–10 分钟到黑门市场；也可按实时导航从堺筋本町换乘。</div><p>退房留到明天；轻装出发，早餐放在黑门市场解决。</p></section>
+<section class="stop"><span class="time">08:30</span><h3>黑门市场早餐</h3><div class="facts"><span class="chip">店铺约 09:00 起</span><span class="chip cash">小摊多现金</span><span class="chip fee">预算 ¥1,500–2,500</span></div><p>有“大阪厨房”之称的传统市场，海鲜、肉类、蔬果和熟食集中，适合少量多样地吃早餐。</p><details class="spot-detail"><summary>展开了解黑门市场</summary><p>黑门市场形成于江户末期，名称来自附近圆明寺的黑色山门。约 580 米的拱廊内分布着鲜鱼店、河豚料理、和牛、玉子烧、水果及干货店，既服务当地餐饮业，也发展成热门观光市场。</p><p><b>怎么逛：</b>商户独立营业，没有统一开门时间，09:00 后选择更多。从北侧或日本桥一侧进入，刺身、扇贝、玉子烧和当季水果择二三项即可。先看清计价单位和座位规则再下单，不要在通道中央边走边吃。</p></details></section>
+<section class="stop"><span class="time">10:00</span><h3>难波八阪神社</h3><div class="facts"><span class="chip">大门 06:00–17:00</span><span class="chip">授与所约 09:00–16:50</span><span class="chip free">免费</span></div><p>以张口吞邪的巨大狮子殿闻名，体量震撼，预留 30 分钟。</p><details class="spot-detail"><summary>展开了解狮子殿</summary><p>狮子殿高约 12 米、宽约 11 米，舞台位于狮口内。民间认为巨口能吞走厄运、带来胜运与学业运，因此常有考生和生意人参拜。</p><p><b>现场看点：</b>狮子的眼睛装有灯光，鼻部设有扬声器，节庆时会作为舞台使用。正面低角度最能表现巨口尺度；本殿规模不大，参拜与拍照约 20–30 分钟即可。</p></details></section>
+<section class="stop"><span class="time">10:45</span><h3>りくろーおじさん难波本店</h3><div class="facts"><span class="chip">09:00–20:00</span><span class="chip pay">信用卡</span><span class="chip">不可预约</span></div><p>现烤芝士蛋糕适合旅途中吃；送人优先薪パイ 8 根 ¥980 或黄油曲奇 8 枚 ¥830。</p></section>
+<section class="stop"><span class="time">11:35</span><h3>四天王寺</h3><div class="transit">难波/日本桥一带 → 四天王寺前夕阳ヶ丘，再步行约 7 分钟。</div><div class="facts"><span class="chip">彼岸会 08:00–17:00</span><span class="chip free">中心伽蓝当日免费</span><span class="chip cash">现金备用</span></div><p>相传由圣德太子于 593 年创建，是日本早期官寺代表。<b>9/24 正值秋季彼岸会</b>，中心伽蓝免费且延长开放。</p><details class="spot-detail"><summary>展开了解四天王寺</summary><p>中心伽蓝以中门、五重塔、金堂和讲堂南北排成一直线，常被称为“四天王寺式伽蓝配置”。建筑历经灾害多次重建，但寺院格局和信仰延续至今。</p><p><b>现场看点：</b>先看石鸟居，再进入中心伽蓝观察笔直中轴。彼岸会期间会有参拜、法要与摊位，人流比普通工作日更密；保持通道畅通，遇到仪式时从侧面安静观看。</p></details></section>
+<section class="stop"><span class="time">13:00</span><h3>新世界轻食 → 通天阁外观</h3><div class="facts"><span class="chip free">街区与外观免费</span><span class="chip">停留 45–60 分</span><span class="chip fee">小吃 ¥500–1,000</span></div><p>晚上安排和牛放题，这里只尝 1–2 串串炸或一份小吃，不吃完整午餐。逛新世界商店街，在街面拍通天阁，不购买展望台门票。</p><details class="spot-detail"><summary>展开了解新世界与通天阁</summary><p>新世界在 20 世纪初以现代娱乐区为目标开发，街区招牌、串炸店和通天阁共同构成大阪南部最鲜明的复古景观。初代通天阁建于 1912 年，现塔于 1956 年落成，是战后大阪复兴的地标。</p><p><b>本次看法：</b>从ジャンジャン横丁走向通天阁本通，在街口拍塔与招牌同框，再绕到塔脚即可。取消登塔后可省下约 60–90 分钟和 ¥1,500，也避免下午排队。</p></details></section>
+<section class="stop"><span class="time">14:15</span><h3>心斋桥筋散步与购物</h3><div class="transit">惠美须町 → 长堀桥（堺筋线），再步行到心斋桥筋；约 15–20 分 / ¥190。</div><p>从心斋桥往南逛到戎桥与道顿堀，途中以服饰、药妆和咖啡休息为主，17:15 前往 MAIDO。</p><details class="spot-detail"><summary>展开了解心斋桥与道顿堀</summary><p>心斋桥筋有顶棚，历史可追溯到长堀川桥梁周边形成的商业街；道顿堀则从戏院和娱乐街发展成餐饮与巨型招牌密集的夜间地标。</p><p><b>怎么逛：</b>从长堀桥进入心斋桥筋，依次经过心斋桥、戎桥和道顿堀运河。MAIDO 位于道顿堀 1 丁目 10-7 ぼんちビル 5F，从大阪 Metro 难波站 14 号出口步行约 4 分钟。</p></details></section>
+<section class="stop"><span class="time">17:30</span><h3>MAIDO 和牛焼肉 · 黑毛和牛放题</h3><div class="facts"><span class="chip book">建议提前订位</span><span class="chip">12:00–24:00</span><span class="chip fee">含软饮 ¥5,000</span><span class="chip pay">Visa / Mastercard / JCB / Amex</span></div><p>官网当前“黑毛和牛食べ放題＋软饮放题”标价 ¥5,000 含税，包含多种和牛腹肉、里脊、牛排与配菜。预约平台可能显示不同套餐或价格，下单前核对套餐名、人数与最终金额。</p><details class="spot-detail"><summary>展开了解用餐安排</summary><p>这是当日主餐，建议按 90–120 分钟留出时间。先点少量招牌和牛部位试味，再按喜好续单，避免一次下单过多；饮酒套餐、特别部位和未列入放题的单点是否加价，以当日菜单为准。</p><p><b>支付：</b>官网明确列出主流信用卡，未确认支付宝、微信和交通 IC。优先刷 Mastercard 并选择 JPY；同时携带现金作为备用。</p></details></section>
+<section class="stop"><span class="time">19:30</span><h3>道顿堀夜景 → Don Quijote</h3><div class="facts"><span class="chip">Donki 24 小时</span><span class="chip pay">信用卡 / IC / 银联</span><span class="chip">免税服务</span></div><p>饭后沿道顿堀运河散步，在戎桥看亮灯，再到 Don Quijote 道顿堀店。购物控制在 60–90 分钟，药妆、日用品和常温零食集中购买。</p></section>
+<section class="stop"><span class="time">21:30</span><h3>道顿堀 → 大阪本町酒店</h3><div class="transit">步行到难波站，御堂筋线 なんば → 本町，约 4 分 / ¥190；再从 12 号口步行回酒店。</div><p>Donki 是 24 小时，但不建议逛到末班车附近；22:00 左右回到酒店最从容。</p></section>
+</div>
+<aside class="side">
+<div class="card"><h3>当日特殊信息</h3><p class="small">四天王寺处于秋季彼岸会，不按原文件的“普通日 08:30–16:30、¥500”执行。</p></div>
+<div class="card"><h3>堂吉诃德</h3><p class="small">选择官方确认 24 小时的“道顿堀店”（宗右卫门町 7-13）。免税规则和现场可用 QR 品牌以收银台为准。</p></div>
+<div class="card"><h3>交通票</h3><p class="small">今天地铁次数较多，可现场比较 Osaka Metro 一日券；普通单程 1 区自 ¥190 起。不要购买已停售的京都“巴士一日券”。</p></div>
+<div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=%E9%BB%91%E9%97%A8%E5%B8%82%E5%9C%BA&amp;travelmode=transit" rel="noreferrer" target="_blank">酒店 → 黑门市场</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%BB%91%E9%97%A8%E5%B8%82%E5%9C%BA&amp;destination=%E9%9A%BE%E6%B3%A2%E5%85%AB%E9%98%AA%E7%A5%9E%E7%A4%BE&amp;travelmode=walking" rel="noreferrer" target="_blank">黑门 → 难波八阪</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%9A%BE%E6%B3%A2%E5%85%AB%E9%98%AA%E7%A5%9E%E7%A4%BE&amp;destination=%E5%9B%9B%E5%A4%A9%E7%8E%8B%E5%AF%BA&amp;travelmode=transit" rel="noreferrer" target="_blank">难波八阪 → 四天王寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%9B%9B%E5%A4%A9%E7%8E%8B%E5%AF%BA&amp;destination=%E9%80%9A%E5%A4%A9%E9%98%81&amp;travelmode=walking" rel="noreferrer" target="_blank">四天王寺 → 新世界</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E9%80%9A%E5%A4%A9%E9%98%81&amp;destination=%E5%BF%83%E6%96%8B%E6%A1%A5&amp;travelmode=transit" rel="noreferrer" target="_blank">新世界 → 心斋桥</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E5%BF%83%E6%96%8B%E6%A1%A5&amp;destination=MAIDO%E5%92%8C%E7%89%9B%E7%83%A7%E8%82%89&amp;travelmode=walking" rel="noreferrer" target="_blank">心斋桥 → MAIDO</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=MAIDO%E5%92%8C%E7%89%9B%E7%83%A7%E8%82%89&amp;destination=Don+Quijote+%E9%81%93%E9%A1%BF%E5%A0%80%E5%BA%97&amp;travelmode=walking" rel="noreferrer" target="_blank">MAIDO → 道顿堀 Donki</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Don+Quijote+%E9%81%93%E9%A1%BF%E5%A0%80%E5%BA%97&amp;destination=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;travelmode=transit" rel="noreferrer" target="_blank">Donki → 酒店</a></div></div>
+</aside>
+</div>
+</article>
+<article class="day" id="day3">
+<header class="day-head"><div class="datebox"><span>FRI</span><b>25</b><span>SEP</span></div><div><h2>奈良 → 宇治 → 京都入住 → 伏见稻荷</h2><p>转场日｜全程铁路走廊，不回头</p><div class="day-route"><span>起点：HOTEL LiVEMAX 大阪本町</span><span>终点：M’s Hotel Kyoto Station Kasuga</span></div></div><div class="day-metrics"><b>22k–27k 步</b>夜宿京都站</div></header>
+<div class="map-preview"><iframe loading="lazy" src="https://maps.google.com/maps?saddr=HOTEL+LiVEMAX+Osaka+Honmachi&amp;daddr=M%27s+Hotel+Kyoto+Station+Kasuga&amp;dirflg=r&amp;output=embed" title="9月25日 Google Maps 路线预览"></iframe><span class="map-caption">稳定预览：大阪酒店 → 京都酒店｜奈良、宇治按逐段导航</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+Osaka+Honmachi&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" rel="noreferrer" target="_blank">在 Google Maps 打开</a></div>
+<div class="day-body">
+<div class="timeline">
+<section class="stop"><span class="time">07:10</span><h3>退房，前往近铁奈良</h3><div class="transit">本町 → なんば；大阪难波 → 近铁奈良，快速急行约 36–40 分 / ¥680，ICOCA，不需预约。</div><p>抵达后第一件事在近铁奈良站存大件行李，大柜按 ¥700–1,000 预留；旺季满柜时用站内人工寄存/附近寄存点。</p></section>
+<section class="stop"><span class="time">08:35</span><h3>奈良公园 → 东大寺大佛殿</h3><div class="facts"><span class="chip free">公园免费</span><span class="chip">东大寺 07:30–17:30</span><span class="chip fee">¥800</span><span class="chip cash">东大寺仅现金</span></div><p>奈良公园以自由活动的鹿闻名；东大寺大佛殿供奉约 15 米高的卢舍那佛。沿南大门进入参观。</p><details class="spot-detail"><summary>展开了解奈良鹿与东大寺</summary><p>春日大社传说中，鹿是神明的使者，今天仍受到保护。东大寺由圣武天皇推动建立，是奈良时代国家佛教的重要中心；现大佛殿虽为江户时代重建，规模依然惊人。</p><p><b>现场看点：</b>南大门两侧有金刚力士像，进入大佛殿后可留意卢舍那佛、两侧菩萨与殿柱孔。鹿仙贝约 ¥200；喂完摊开双手，9–11 月公鹿发情期尤其不要追逐、抚角或挑逗。</p></details></section>
+<section class="stop"><span class="time">10:20</span><h3>若草山一重目</h3><div class="facts"><span class="chip">09:00–17:00</span><span class="chip fee">¥150</span><span class="chip cash">现金</span></div><p>草坡开阔、可俯瞰奈良盆地；只到第一观景区域，不登 342 米山顶。</p><details class="spot-detail"><summary>展开了解若草山</summary><p>若草山由三重草坡组成，整座山覆以草地，以每年冬季的烧山仪式闻名。山麓与一重目之间坡度已经明显，但一重目就能得到很好的城市与寺院视野。</p><p><b>怎么走：</b>从东大寺东北方向到南门或北门售票口，按“一重目”标识上行。草坡遮阴少，晴天注意补水；当天还要转场宇治，无论是否拍够，11:20 都开始折返。</p></details></section>
+<section class="stop"><span class="time">11:45</span><h3>奈良快速午餐</h3><p>柿叶寿司本舗たなか奈良本店 09:00–19:00，茶屋 11:00–16:00；预算 ¥1,000–2,000。12:25 前取行李，步行至 JR 奈良站。</p></section>
+<section class="stop"><span class="time">13:00</span><h3>JR 奈良 → JR 宇治</h3><div class="transit">JR 奈良线直达约 39 分 / ¥510，ICOCA；到站存行李。</div></section>
+<section class="stop"><span class="time">13:50</span><h3>宇治桥、宇治川 → 宇治神社 → 宇治上神社</h3><div class="facts"><span class="chip free">免费</span><span class="chip">宇治上神社约 16:00 闭门</span><span class="chip">宇治神社御守至 16:30</span></div><p>宇治川两岸串起古社与茶文化；先走河东岸两社，约 35–45 分钟。</p><details class="spot-detail"><summary>展开了解宇治桥与两座神社</summary><p>宇治桥是日本古桥之一，也是《源氏物语》“宇治十帖”的重要舞台意象。宇治上神社是世界文化遗产，本殿被认为是日本现存很早的神社建筑；相邻宇治神社则以“回首兔”传说闻名。</p><p><b>现场看点：</b>从桥上看宇治川、中之岛与两岸山色，再沿东岸依次参拜宇治神社和宇治上神社。两社过去关系密切，建筑气质却不同；先访两社还能避开较早闭门时间。</p></details></section>
+<section class="stop"><span class="time">15:00</span><h3>伊藤久右卫门宇治本店</h3><div class="facts"><span class="chip">10:00–18:00</span><span class="chip">茶房 L.O. 17:30</span><span class="chip pay">Mastercard / ICOCA / 微信 / 支付宝</span><span class="chip fee">蒙布朗抹茶圣代 ¥1,390</span></div><p>创立于江户后期的宇治茶老铺，本店可集中体验抹茶甜品、选茶和伴手礼。</p><details class="spot-detail"><summary>展开了解宇治茶与本店</summary><p>宇治茶并不只指产自宇治市内的茶，而是一套以京都府南部为核心、长期形成的栽培与加工传统。抹茶由碾茶磨粉制成，玉露强调覆下栽培带来的鲜味，煎茶则更清爽日常。</p><p><b>怎么买：</b>先决定送礼还是自用，再请店员比较抹茶点心、煎茶与玉露的保存方式。茶房排队超过 20 分钟就改为购买抹茶冰品或常温点心，不影响 16:00 进入平等院。</p></details></section>
+<section class="stop"><span class="time">16:00</span><h3>平等院庭园 + 凤翔馆</h3><div class="facts"><span class="chip">庭园 08:45–17:30</span><span class="chip">最晚入园 17:15</span><span class="chip fee">¥700</span><span class="chip pay">主票可无现金</span></div><p>凤凰堂是十日元硬币图案原型，也是平安时代净土庭园的代表。参观外观、庭园和凤翔馆。</p><details class="spot-detail"><summary>展开了解平等院</summary><p>藤原赖通于 1052 年将别业改为寺院，凤凰堂翌年建成，中堂供奉阿弥陀如来。倒映水面的对称构图象征极乐净土；屋顶凤凰图案也出现在一万日元纸币上。</p><p><b>现场看点：</b>先从阿字池正面看十日元硬币同款构图，再沿池边绕行，最后进入凤翔馆看原凤凰、云中供养菩萨与文物。9/25 仍在夏季限流期，本路线不排凤凰堂内部参拜。</p></details></section>
+<section class="stop"><span class="time">17:25</span><h3>JR 宇治 → 京都，酒店入住</h3><div class="transit">JR 奈良线至京都约 17–25 分 / ¥240；八条口步行约 7 分钟至酒店。</div><p>M’s Hotel Kyoto Station Kasuga 16:00 起入住、10:00 退房，支持 Mastercard。</p></section>
+<section class="stop"><span class="time">18:30</span><h3>伏见稻荷大社夜访</h3><div class="transit">京都 → JR 稻荷约 5 分；普通列车才停稻荷站。回程班次到深夜，本计划 20:15 左右离开。</div><div class="facts"><span class="chip free">境内 24 小时</span><span class="chip free">免费</span><span class="chip">无需预约</span></div><p>全国约三万座稻荷神社的总本宫，以连绵朱红鸟居闻名；夜访只走到奥社奉拜所。</p><details class="spot-detail"><summary>展开了解千本鸟居</summary><p>稻荷信仰与五谷丰登、商业兴旺相关，狐狸被视为稻荷神的使者。鸟居多由个人或企业奉纳，背面可看到奉纳者与日期，密集排列后形成朱红色隧道。</p><p><b>夜访范围：</b>楼门、本殿、千本鸟居与奥社奉拜所往返 60–80 分钟。奥社的“おもかる石”可体验许愿传统；主路有照明，但继续登山会更暗且耗时，本行程到奥社即原路返回。</p></details></section>
+<section class="stop"><span class="time">20:15</span><h3>JR 稻荷 → 京都站 → 京都酒店</h3><div class="transit">JR 奈良线普通列车：稻荷 → 京都约 5 分 / ¥150；在京都站用餐后，从八条西口步行约 7 分钟回酒店。</div><p>当天终点是 M’s Hotel Kyoto Station Kasuga。建议 21:30–22:00 回房，为第二天唯一一次早起留睡眠。</p></section>
+</div>
+<aside class="side">
+<div class="card"><h3>当天硬截止</h3><ul><li>11:20 若草山下撤</li><li>13:00 左右离开奈良</li><li>16:00 前到平等院</li></ul></div>
+<div class="card"><h3>下雨方案</h3><p class="small">删若草山，奈良公园与东大寺照常；多出的时间给宇治茶房和博物馆。</p></div>
+<div class="card"><h3>行李</h3><p class="small">近铁奈良和 JR 宇治各存一次。预算 ¥1,400–2,000；准备现金与 ¥100 硬币。</p></div>
+<div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=HOTEL+LiVEMAX+%E5%A4%A7%E9%98%AA%E6%9C%AC%E7%94%BA&amp;destination=%E8%BF%91%E9%93%81%E5%A5%88%E8%89%AF%E7%AB%99&amp;travelmode=transit" rel="noreferrer" target="_blank">大阪酒店 → 近铁奈良</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E8%BF%91%E9%93%81%E5%A5%88%E8%89%AF%E7%AB%99&amp;destination=%E8%8B%A5%E8%8D%89%E5%B1%B1&amp;waypoints=%E4%B8%9C%E5%A4%A7%E5%AF%BA&amp;travelmode=walking" rel="noreferrer" target="_blank">奈良站 → 东大寺 → 若草山</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%A5%88%E8%89%AF%E7%AB%99&amp;destination=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;travelmode=transit" rel="noreferrer" target="_blank">JR 奈良 → JR 宇治</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;destination=%E5%B9%B3%E7%AD%89%E9%99%A2&amp;waypoints=%E5%AE%87%E6%B2%BB%E4%B8%8A%E7%A5%9E%E7%A4%BE%7C%E4%BC%8A%E8%97%A4%E4%B9%85%E5%8F%B3%E5%8D%AB%E9%97%A8%E5%AE%87%E6%B2%BB%E6%9C%AC%E5%BA%97&amp;travelmode=walking" rel="noreferrer" target="_blank">宇治步行线</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=JR%E5%AE%87%E6%B2%BB%E7%AB%99&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" rel="noreferrer" target="_blank">宇治 → 京都酒店</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=%E4%BC%8F%E8%A7%81%E7%A8%BB%E8%8D%B7%E5%A4%A7%E7%A4%BE&amp;travelmode=transit" rel="noreferrer" target="_blank">酒店 → 伏见稻荷</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BC%8F%E8%A7%81%E7%A8%BB%E8%8D%B7%E5%A4%A7%E7%A4%BE&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" rel="noreferrer" target="_blank">伏见稻荷 → 酒店</a></div></div>
+</aside>
+</div>
+</article>
+<article class="day" id="day4">
+<header class="day-head"><div class="datebox"><span>SAT</span><b>26</b><span>SEP</span></div><div><h2>京都核心 · 猪一午餐与寿喜烧</h2><p>9/25 更新｜10:30 取号，18:00 高岛屋晚餐；金阁寺按午餐进度取舍</p><div class="day-route"><span>起点：M’s Hotel Kyoto Station Kasuga</span><span>终点：M’s Hotel Kyoto Station Kasuga</span></div></div><div class="day-metrics"><b>早起 · 高强度</b>可切换东山路线</div></header>
+<div class="map-preview"><iframe loading="lazy" src="https://maps.google.com/maps?saddr=M%27s+Hotel+Kyoto+Station+Kasuga&amp;daddr=Mishima-tei+Kyoto+Takashimaya&amp;dirflg=r&amp;output=embed" title="9月26日 Google Maps 路线预览"></iframe><span class="map-caption">京都站酒店 → 三嶋亭京都高岛屋店｜点击下方逐段导航查看当天交通</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=Mishima-tei+Kyoto+Takashimaya&amp;travelmode=transit" rel="noreferrer" target="_blank">在 Google Maps 打开</a></div>
+<div class="day-body">
+<div class="timeline"><section class="stop"><span class="time">05:40—06:10</span><h3>酒店 → 八坂塔 / 清水寺</h3><p>清晨优先叫车到八坂塔一带，再步行上清水坂；如果不叫车，需先核对当时可乘的公交或铁路班次，预留更长时间。清水寺 06:00 开门。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Yasaka+Pagoda+Kyoto" rel="noreferrer" target="_blank">八坂塔地图 ↗</a><a href="https://www.google.com/maps/search/?api=1&amp;query=Kiyomizu-dera" rel="noreferrer" target="_blank">清水寺地图 ↗</a></div></section><section class="stop"><span class="time">06:10—08:40</span><h3>清水寺 → 三年坂 → 二年坂 → 祇园</h3><p>先在清水寺参拜，再沿坡道下行，拍八坂塔，经过高台寺外围和八坂神社。商铺清晨未必开门，以步行拍照为主；早餐可在途中或河原町简单解决。</p></section><section class="stop"><span class="time">08:40—10:20</span><h3>祇园、鸭川 → 猪一本店</h3><p>逐步向西南走到寺町通仏光寺下る恵美須之町 542；留出缓冲，不要将 10:30 当作到达时间。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Menya+Inoichi+542+Ebisunocho+Kyoto" rel="noreferrer" target="_blank">猪一本店地图 ↗</a></div></section><section class="stop"><span class="time">10:20—12:00（依票面调整）</span><h3>猪一取号 + 午餐 <span class="chip">关键节点</span></h3><p>10:30 开始发午餐券；领取时确认返回时间。11:00—14:30 是午餐营业时段。若券已发完，附近直接换一家午餐；若票面返回时间较晚，按下方“东山优先”走。猪一是一人一碗。</p></section><section class="stop"><span class="time">12:00—13:10</span><h3>前往金阁寺 <span class="chip">紧凑路线</span></h3><p>步行到四条站，地下铁乌丸线往北大路站，再转开往金阁寺道的市巴士 204/205 等；算上步行候车约 55–70 分钟。金阁寺 09:00—17:00，成人 ¥500。</p><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Menya+Inoichi+Kyoto&amp;destination=Kinkaku-ji+Kyoto&amp;travelmode=transit" rel="noreferrer" target="_blank">实时交通 ↗</a></div></section><section class="stop"><span class="time">13:10—13:55</span><h3>金阁寺</h3><p>以舍利殿、镜湖池和园内步行为主。13:55 左右离开，为横穿京都预留足够时间。</p><details class="spot-detail"><summary>展开了解金阁寺</summary><p>正式寺名为鹿苑寺，原为室町幕府将军足利义满的山庄。舍利殿三层分别呈现寝殿造、武家造与禅宗佛殿风格；现建筑在火灾后于 1955 年重建。</p><p>现场看点：入口后第一处镜湖池正面视角最完整，继续单向绕行会看到背面、陆舟之松、白蛇塚与茶所。参观线不能逆行，全程控制在 50 分钟。</p></details></section><section class="stop"><span class="time">13:55—15:00</span><h3>金阁寺道 → 银阁寺道</h3><p>市巴士 204；周六若 102 在当时运营也可按现场车站指示乘坐。交通约 50–65 分钟，遇拥堵继续延长。到银阁寺道后仍需步行。</p><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kinkaku-ji+Kyoto&amp;destination=Ginkaku-ji+Kyoto&amp;travelmode=transit" rel="noreferrer" target="_blank">实时交通 ↗</a></div></section><section class="stop"><span class="time">15:00—15:40</span><h3>银阁寺</h3><p>夏季 08:30—17:00，成人 ¥1,000。主看庭园与观音殿外观；它通常约 30 分钟能走完。</p><details class="spot-detail"><summary>展开了解银阁寺</summary><p>正式寺名为慈照寺，由足利义政的山庄发展而来。观音殿被俗称“银阁”，并未覆盖银箔；其木色、书院文化、庭园和茶道美学共同体现东山文化。</p><p><b>现场看点：</b>先看银沙滩与向月台，再沿苔庭上坡到展望处俯瞰伽蓝和京都市区，最后回到观音殿水边。路线有短坡和台阶，参观约 45–55 分钟。</p></details></section><section class="stop"><span class="time">15:40—16:35</span><h3>哲学之道南行 → 永观堂</h3><p>慢走哲学之道到永观堂约需 40–50 分钟，已赶不上 16:00 受付。若 15:40 才离开银阁寺，永观堂内部仅在能确认 16:00 前抵达时再尝试；否则沿哲学之道去南禅寺，永观堂只看外围。不要为赶关门一路跑。成人参拜费 ¥1,000。</p></section><section class="stop"><span class="time">16:35—17:10</span><h3>南禅寺水路阁 / 三门周边</h3><p>南禅寺收费区域 16:40 停止受付、17:00 结束；此段以境内外观散步为主。要进方丈或登三门，须提前腾出时间。</p></section><section class="stop"><span class="time">17:10—18:00</span><h3>向四条河原町移动</h3><p>蹴上站坐东西线至三条京阪，转京阪至祇园四条，再步行到高岛屋；或按实时交通选公交 / 叫车。若已经在祇园，直接步行。</p><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Nanzen-ji+Kyoto&amp;destination=Kyoto+Takashimaya+S.C.&amp;travelmode=transit" rel="noreferrer" target="_blank">实时交通 ↗</a></div></section><section class="stop"><span class="time">18:00—19:45（排队浮动）</span><h3>三嶋亭 京都高島屋店 · 寿喜烧</h3><p>京都高岛屋 S.C. 7F，现场排队。店铺 11:00—21:30、20:00 最晚入店及点单；官方标注晚餐平均预算约 ¥6,000/人。排队长时以确保 20:00 前进店为准。</p><div class="map-links"><a href="https://www.google.com/maps/search/?api=1&amp;query=Mishima-tei+Kyoto+Takashimaya" rel="noreferrer" target="_blank">餐厅地图 ↗</a><a href="tel:+81752527800" rel="noreferrer">拨打餐厅 ↗</a></div></section><section class="stop"><span class="time">饭后</span><h3>鸭川夜景 → 京都站南侧酒店</h3><p>从四条河原町步行到鸭川，再乘阪急 / 地铁 / 巴士，按实时线路回京都站；体力不足就直接回酒店。</p></section></div>
+<aside class="side"><div class="card"><h3>路线怎么选</h3><p><b>12:00 前吃完：</b>按左侧路线去金阁寺，下午银阁寺后优先南禅寺；永观堂内部是可删项。</p><details open=""><summary><b>午餐较晚：东山优先</b></summary><p>跳过金阁寺。午餐后从祇园四条坐京阪线到出町柳，转市巴士 7/203 到银阁寺道，另留步行时间。</p><p>约 13:00–13:45 银阁寺 → 13:45–14:40 哲学之道 → 14:40–15:30 永观堂 → 15:40–16:40 南禅寺 → 18:00 三嶋亭。若午餐更晚，整体顺延并删永观堂，保留晚餐。</p></details></div><div class="card"><h3>猪一：先取号再游览</h3><p>午餐 10:30 发券，11:00–14:30 营业。整理券可能开门前发完；按票面时间全员返回。回店时间不等于立即入座，晚到可能作废。</p><p>若午券已发完，附近解决午餐，继续景点；不为晚券再折返，晚餐留给寿喜烧。</p></div><div class="card"><h3>寿喜烧不用预订</h3><p><b>三嶋亭 京都高島屋店</b><br/>京都高岛屋 S.C. 7F<br/>11:00–21:30，20:00 最晚入店 / 点单。官方明确席预约不可，直接现场排队。</p><p>晚餐平均预算约 ¥6,000/人；具体套餐以菜单为准。电话 <a href="tel:+81752527800">075-252-7800</a>。</p><p>排队过长或停止接待时，再考虑原计划的かつくら四条寺町店。</p></div><div class="card"><h3>交通说明</h3><p>市巴士均一区间 ¥230；地铁另计，刷 ICOCA / Suica 最方便。时段是含步行和候车的估算，不是锁定班次。清晨打车按表计费，未预估固定车资。</p></div><div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=Yasaka+Pagoda&amp;travelmode=driving" rel="noreferrer" target="_blank">酒店 → 八坂塔</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kiyomizu-dera&amp;destination=Menya+Inoichi+Kyoto&amp;travelmode=walking" rel="noreferrer" target="_blank">清水寺 → 猪一</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Menya+Inoichi+Kyoto&amp;destination=Kinkaku-ji&amp;travelmode=transit" rel="noreferrer" target="_blank">猪一 → 金阁寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kinkaku-ji&amp;destination=Ginkaku-ji&amp;travelmode=transit" rel="noreferrer" target="_blank">金阁寺 → 银阁寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Menya+Inoichi+Kyoto&amp;destination=Ginkaku-ji&amp;travelmode=transit" rel="noreferrer" target="_blank">东山路线：猪一 → 银阁寺</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Ginkaku-ji&amp;destination=Eikando+Kyoto&amp;travelmode=walking" rel="noreferrer" target="_blank">银阁寺 → 永观堂</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Nanzen-ji&amp;destination=Mishima-tei+Kyoto+Takashimaya&amp;travelmode=transit" rel="noreferrer" target="_blank">南禅寺 → 三嶋亭</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Mishima-tei+Kyoto+Takashimaya&amp;destination=M%27s+Hotel+Kyoto+Station+Kasuga&amp;travelmode=transit" rel="noreferrer" target="_blank">三嶋亭 → 酒店</a></div></div></aside>
+</div>
+</article>
+<article class="day" id="day5">
+<header class="day-head"><div class="datebox"><span>SUN</span><b>27</b><span>SEP</span></div><div><h2>京都站八条口 → 关西机场</h2><p>已按 12:35 国际航班留出约 3 小时 45 分钟</p><div class="day-route"><span>起点：M’s Hotel Kyoto Station Kasuga</span><span>终点：KIX T1（返程日不再回酒店）</span></div></div><div class="day-metrics"><b>07:20 发车</b>08:48 到 T1</div></header>
+<div class="map-preview"><iframe loading="lazy" src="https://maps.google.com/maps?saddr=Kyoto+Station+Hachijo+Exit&amp;daddr=Kansai+International+Airport+Terminal+1&amp;dirflg=r&amp;output=embed" title="9月27日 Google Maps 路线预览"></iframe><span class="map-caption">稳定预览：京都站八条口 → KIX T1｜实际乘已预约机场巴士</span><a href="https://www.google.com/maps/dir/?api=1&amp;origin=Kyoto+Station+Hachijo+Exit&amp;destination=Kansai+International+Airport+Terminal+1&amp;travelmode=transit" rel="noreferrer" target="_blank">在 Google Maps 打开</a></div>
+<div class="day-body">
+<div class="timeline">
+<section class="stop"><span class="time">06:20</span><h3>起床、退房</h3><p>酒店步行至京都站八条口 KY2 站台约 7 分钟；06:55 前到站，确认航站楼。</p></section>
+<section class="stop"><span class="time">07:20</span><h3>机场利木津巴士</h3><div class="facts"><span class="chip book">全便座位指定</span><span class="chip fee">¥2,800</span><span class="chip pay">预约可信用卡</span><span class="chip">行李放车底</span></div><p>官方 2026/3/29 起时刻：京都站八条口 07:20 → KIX T1 08:48 → T2 08:59。京都出发须预约，乘车日前一个月开放。</p></section>
+<section class="stop"><span class="time">08:48</span><h3>KIX T1 办理值机</h3><p>先确认航空公司航站楼，再托运和安检。购物放在手续后剩余时间，不为了伴手礼拖延过关。</p></section>
+<section class="stop"><span class="time">12:35</span><h3>起飞</h3><p>公交受路况影响，但此方案仍比起飞早 3 小时 47 分到 T1。若前夜收到道路异常/台风预警，备用方案改乘更早的 HARUKA，并以 JR 官方实时信息为准。</p></section>
+</div>
+<aside class="side">
+<div class="card"><h3>更早备选</h3><p class="small">官方另有 07:05 班，08:33 到 T1；希望更稳可订此班。不要选原稿中的模糊“07:00 左右”。</p></div>
+<div class="card"><h3>巴士支付</h3><p class="small">网上订票用信用卡；ICOCA 可付单程票，但同样需先预约座位。上车向司机购票时不可刷信用卡。</p></div>
+<div class="card"><h3>逐段导航</h3><div class="map-links"><a href="https://www.google.com/maps/dir/?api=1&amp;origin=M%27s+Hotel+Kyoto+Station+Kasuga&amp;destination=%E4%BA%AC%E9%83%BD%E7%AB%99%E5%85%AB%E6%9D%A1%E5%8F%A3&amp;travelmode=walking" rel="noreferrer" target="_blank">酒店 → 八条口 KY2</a><a href="https://www.google.com/maps/dir/?api=1&amp;origin=%E4%BA%AC%E9%83%BD%E7%AB%99%E5%85%AB%E6%9D%A1%E5%8F%A3&amp;destination=%E5%85%B3%E8%A5%BF%E5%9B%BD%E9%99%85%E6%9C%BA%E5%9C%BA%E7%AC%AC%E4%B8%80%E8%88%AA%E7%AB%99%E6%A5%BC&amp;travelmode=transit" rel="noreferrer" target="_blank">京都站 → KIX T1</a></div></div>
+</aside>
+</div>
+</article>
+<section class="section print-break" id="money">
+<div class="section-head"><h2>费用、ICOCA 与现金</h2><p>金额为每人估算，不含住宿、机票和大额购物</p></div>
+<div class="grid grid-3">
+<article class="card stat"><span class="small">交通与寄存</span><strong>约 ¥9,000–11,000</strong><span>含机场巴士、城际、地铁公交、两次寄存</span></article>
+<article class="card stat"><span class="small">主要门票</span><strong>约 ¥5,550</strong><span>通天阁只看外观；含大阪城与本行程寺院</span></article>
+<article class="card stat"><span class="small">餐饮</span><strong>约 ¥17,000–23,000</strong><span>含 MAIDO ¥5,000 与かつくら约 ¥2,000–3,000</span></article>
+</div>
+<div class="grid grid-2">
+<article class="card"><h3>ICOCA ¥10,000：余额基本充足</h3><p>普通铁路、地铁和公交预计约消耗 <b>¥7,000–8,500</b>；机场巴士建议线上刷卡购票，不占 ICOCA。无需提前再充，余额低于 ¥1,500 时再用现金小额充值，并保留约 ¥1,000 应急。</p></article>
+<article class="card"><h3>现金 ¥30,000：充足且有余量</h3><p>寺院、小摊、储物柜、鹿仙贝和临时 ICOCA 充值预计约用 <b>¥8,000–12,000</b>。MAIDO、Donki 和大额购物优先刷卡，三嶋亭支付方式现场确认，另留 ¥10,000 不动作为交通或刷卡失败的应急金。</p></article>
+</div>
+<div class="alert"><div class="mark">¥</div><div><strong>汇丰“红蓝狮子 Mastercard”先看卡面/香港汇丰 App 确认类型。</strong>若是 Mastercard 扣账卡，日元余额会优先直接扣；不足时自动折算港币，官方称海外消费不收外币交易费。若是 Red 信用卡，外币交易费通常为 1.95%。两者在日本 POS 都选择 <b>JPY 日元</b>，拒绝商户 DCC 港币换算。</div></div>
+<div class="table-wrap">
+<table><thead><tr><th>项目</th><th>参考金额</th><th>推荐支付</th><th>预约</th></tr></thead><tbody>
+<tr><td>大阪城天守阁</td><td>¥1,200</td><td>Mastercard / ICOCA / 支付宝微信</td><td>现场或电子票</td></tr>
+<tr><td>新世界 + 通天阁外观</td><td>¥0</td><td>—</td><td>无需预约</td></tr>
+<tr><td>东大寺 + 若草山</td><td>¥950</td><td>现金</td><td>现场</td></tr>
+<tr><td>平等院</td><td>¥700</td><td>卡 / 电子支付；备现金</td><td>现场</td></tr>
+<tr><td>清水寺 + 金阁寺 + 银阁寺</td><td>¥2,000</td><td>现金最稳</td><td>现场</td></tr>
+<tr><td>永观堂 + 南禅寺方丈</td><td>¥1,600</td><td>现金最稳</td><td>现场</td></tr>
+<tr><td>MAIDO 黑毛和牛放题 + 软饮</td><td>官网当前 ¥5,000</td><td>Mastercard；备现金</td><td>建议提前订位</td></tr>
+<tr><td>三嶋亭京都高岛屋店</td><td>官方晚餐平均约 ¥6,000/人</td><td>支付方式现场确认；备现金</td><td>不接受预约，现场排队</td></tr>
+<tr><td>机场巴士</td><td>¥2,800</td><td>线上信用卡 / ICOCA</td><td>必须预留指定座</td></tr>
+</tbody></table>
+</div>
+</section>
+<section class="section" id="gifts">
+<div class="section-head"><h2>伴手礼购买节奏</h2><p>按保存条件排序；价格以店头当日为准</p></div>
+<div class="grid grid-3">
+<article class="card gift"><h3>薪パイ 8 根</h3><div class="price">¥980</div><p class="where">りくろーおじさん难波本店｜9/24 10:45</p><p>常温、比芝士蛋糕更适合带走。黄油曲奇 8 枚 ¥830 也合适。</p></article>
+<article class="card gift"><h3>抹茶夹心饼“叶ごろも”</h3><div class="price">10 枚 ¥1,490</div><p class="where">伊藤久右卫门宇治本店｜9/25 15:00</p><p>送礼体面。官网当前标为冷藏配送商品，旅途携带先向店员确认保存要求。</p></article>
+<article class="card gift"><h3>宇治茶 / 玉露 / 煎茶</h3><div class="price">约 ¥1,000–3,000</div><p class="where">伊藤久右卫门宇治本店｜9/25</p><p>常温稳定、重量轻，是最稳妥的宇治伴手礼。</p></article>
+<article class="card gift"><h3>八桥 / 生八桥</h3><div class="price">约 ¥650–2,000</div><p class="where">京都站或清水寺周边｜9/26–27</p><p>生八桥保质期短，最后一天买；硬八桥更适合长途。</p></article>
+<article class="card gift"><h3>柿叶寿司</h3><div class="price">约 ¥1,000–2,000</div><p class="where">柿叶寿司本舗たなか奈良本店｜9/25 午餐</p><p>适合当天吃或短期携带，按包装保存说明执行。</p></article>
+<article class="card gift"><h3>药妆与常温零食</h3><div class="price">按需</div><p class="where">Don Quijote 道顿堀店｜9/24 晚</p><p>同店同日集中结账，携护照办免税；现场规则优先。</p></article>
+</div>
+</section>
+<section class="section" id="sources">
+<div class="section-head"><h2>核对记录与官方来源</h2><p>重点信息在 2026-09-20 核对；本次餐厅调整于 2026-09-22 复核</p></div>
+<div class="card">
+<ul class="source-list">
+<li><a href="https://www.osakacastle.net/guide/" rel="noreferrer" target="_blank">大阪城天守阁：时间、¥1,200、支付方式</a></li>
+<li><a href="https://maidowagyuyakiniku.com/shopinfo/" rel="noreferrer" target="_blank">MAIDO：地址、营业时间、交通与信用卡</a></li>
+<li><a href="https://maidowagyuyakiniku.com/menu/" rel="noreferrer" target="_blank">MAIDO：黑毛和牛放题套餐与官网价格</a></li>
+<li><a href="https://www.shitennoji.or.jp/admission.html" rel="noreferrer" target="_blank">四天王寺：彼岸会开放与中心伽蓝免费</a></li>
+<li><a href="https://www.todaiji.or.jp/information/haikan/" rel="noreferrer" target="_blank">东大寺：07:30–17:30、¥800、仅现金</a></li>
+<li><a href="https://www.byodoin.or.jp/guide/" rel="noreferrer" target="_blank">平等院：营业、¥700</a></li>
+<li><a href="https://www.byodoin.or.jp/news/" rel="noreferrer" target="_blank">平等院：2026 夏季凤凰堂内部参拜变更</a></li>
+<li><a href="https://www.itohkyuemon.co.jp/corporate/shop/uji/" rel="noreferrer" target="_blank">伊藤久右卫门：营业与支付</a></li>
+<li><a href="https://www.kiyomizudera.or.jp/en/location/" rel="noreferrer" target="_blank">清水寺：2026 开放时间</a></li>
+<li><a href="https://www.shokoku-ji.jp/kinkakuji/" rel="noreferrer" target="_blank">金阁寺：开放信息</a></li>
+<li><a href="https://www.shokoku-ji.jp/ginkakuji/" rel="noreferrer" target="_blank">银阁寺：08:30–17:00</a></li>
+<li><a href="https://www.shokoku-ji.jp/ginkakuji/news/%E3%80%90%E9%87%8D%E8%A6%81%E3%80%91%E3%80%80%E5%8F%82%E6%8B%9D%E5%BF%97%E7%B4%8D%E6%96%99%E6%94%B9%E5%AE%9A%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B2026%E5%B9%B44%E6%9C%881%E6%97%A5%E3%82%88/" rel="noreferrer" target="_blank">银阁寺：2026/4/1 涨至 ¥1,000</a></li>
+<li><a href="https://www.eikando.or.jp/English/haikan_e.html" rel="noreferrer" target="_blank">永观堂：普通参拜 ¥1,000、受付时间</a></li>
+<li><a href="https://www.nanzenji.or.jp/about_rinzaishu/visit" rel="noreferrer" target="_blank">南禅寺：时间与各区域票价</a></li>
+<li><a href="https://www.katsukura.jp/shops/sijoteramachi/" rel="noreferrer" target="_blank">かつくら四条寺町店：地址、营业时间与不接受预约</a></li>
+<li><a href="https://menyainoichi.net/news/663335b9c7a87201ab8228cf" rel="noreferrer" target="_blank">面屋猪一：不预约、当日整理券规则</a></li>
+<li><a href="https://www.kate.co.jp/timetable/detail/KY" rel="noreferrer" target="_blank">京都机场巴士：班次、¥2,800、全便预约</a></li>
+<li><a href="https://www.keihanbus.jp/limousine/kix/limousine_kanku_kyoto.html" rel="noreferrer" target="_blank">京阪巴士：购票与 ICOCA 说明</a></li>
+<li><a href="https://www.hotel-livemax.com/osaka/honmachi/" rel="noreferrer" target="_blank">大阪酒店：入住与支付</a></li>
+<li><a href="https://kyohotel.jp/en/hotel/mshotel-kasuga-en/" rel="noreferrer" target="_blank">京都酒店：入住、地址与卡种</a></li>
+<li><a href="https://www.hsbc.com.hk/help/faq/debit-cards/" rel="noreferrer" target="_blank">汇丰香港 Mastercard 扣账卡：外币扣款规则</a></li>
+<li><a href="https://www.hsbc.com.hk/content/dam/hsbc/hk/docs/credit-cards/red/ewelcome-pack.pdf" rel="noreferrer" target="_blank">汇丰 Red 信用卡：外币交易费</a></li>
+<li><a href="https://www.takashimaya.co.jp/kyoto/specialtystores/restaurant/shop/70011" rel="noreferrer" target="_blank">三嶋亭京都高岛屋：不可预约、20:00 最晚入店、晚餐平均预算</a></li></ul>
+</div>
+<div class="alert"><div class="mark">i</div><div><strong>仍需临行复查的内容</strong>天气、台风、铁路临时停运、餐厅临时休业、储物柜余量无法提前锁定。建议出发前查看 MAIDO 预约确认、三嶋亭/面屋猪一临时公告、机场巴士订单及日本天气预警。</div></div>
+</section>
+</main>
+<dialog aria-labelledby="map-dialog-title" class="map-dialog" id="map-dialog">
+<div class="map-dialog-head"><h3 id="map-dialog-title">行程定位图</h3><button aria-label="关闭地图" data-map-close="" type="button">×</button></div>
+<div class="map-dialog-body" id="map-dialog-body"></div>
+<p class="map-note">可横向滚动查看完整大图。序号对应行程顺序，H 代表酒店；地图为方位示意，实时交通请使用各地图旁的 Google Maps 链接。</p>
+</dialog>
+<footer>中秋关西 5 日 · 优化核对版｜2026.09.23–09.27｜页面内目录均为锚点，不含本机 file:/// 绝对链接。<br/>个人散客信息按公开资料整理；现场公告、预约确认邮件与票面时间具有最高优先级。</footer>
+</div>
+<script>
     document.querySelectorAll('[data-save]').forEach(function(box){
       var key='kansai-'+box.dataset.save;
       box.checked=localStorage.getItem(key)==='1';
@@ -352,4 +320,3 @@
   </script>
 </body>
 </html>
-
